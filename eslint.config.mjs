@@ -97,6 +97,17 @@ export default [
         }
     },
 
+    {
+        settings: {
+          'import/resolver': {
+            typescript: {
+              project: './tsconfig.json',
+              alwaysTryTypes: true
+            }
+          }
+        }
+      },
+
     // Prettier compatibility (MUST BE LAST)
     eslintConfigPrettier,
 
