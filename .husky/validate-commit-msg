@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Allowed commit types (modify as needed)
+VALID_TYPES="feat|fix|docs|style|refactor|test|chore|build|ci|perf|revert"
+
+# Read the commit message
+COMMIT_MSG=$(cat "$1")
+
+# Check format (type: description)
+if ! echo "$COMMIT_MSG" | grep -qE "^($VALID_TYPES): .+"; then
+  echo "❌ Invalid commit message format!" >&2
+  echo "Use: <type>: <description>" >&2
+  echo "Allowed types: $VALID_TYPES" >&2
+  echo "Description min chars: 15" >&2
+  exit 1
+fi
+
+# Check description length
+if [ "$(echo "$COMMIT_MSG" | awk -F': ' '{print $2}' | wc -m)" -lt 15 ]; then
+  echo "❌ Description too short (min 15 chars)" >&2
+  exit 1
+fi
+
+exit 0

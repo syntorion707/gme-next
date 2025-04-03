@@ -1,0 +1,58 @@
+{
+    "name": "nextjs-ecom-starter",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+        "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "lint:all": "npm run lint && npm run format:check",
+        "fix:all": "npm run lint:fix && npm run format",
+        "prepare": "husky",
+        "postinstall": "shx test -d .git && shx test -z \"$CI\" && git config core.hooksPath .husky && shx chmod +x .husky/* || exit 0"
+    },
+    "dependencies": {
+        "next": "15.2.4",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@eslint/js": "^9.23.0",
+        "@next/eslint-plugin-next": "^15.2.4",
+        "@tailwindcss/postcss": "^4",
+        "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "15.2.4",
+        "eslint-config-prettier": "^10.1.1",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-prettier": "^5.2.6",
+        "eslint-plugin-promise": "^7.2.1",
+        "eslint-plugin-react": "^7.37.4",
+        "globals": "^16.0.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.5.0",
+        "prettier": "^3.5.3",
+        "prettier-plugin-tailwindcss": "^0.6.11",
+        "shx": "^0.4.0",
+        "tailwindcss": "^4",
+        "typescript": "^5",
+        "typescript-eslint": "^8.29.0"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "prettier --write",
+            "eslint --fix"
+        ],
+        "*.{css,scss,md,json}": [
+            "prettier --write"
+        ]
+    }
+}
