@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface ProductCardProps {
@@ -11,7 +12,16 @@ const Gridview: React.FC<ProductCardProps> = ({ product }) => {
                 <p className='p-1 text-end text-xs font-bold text-white'>MULTIPLE OPTIONS</p>
             </div>
             <div className='flex items-center border-gray-300 md:justify-center md:border-b md:p-6'>
-                <img src={product.imageUrl} alt={product.name} className='h-20 w-40 md:h-auto md:w-auto' />
+                <Image
+                    src={product.imageUrl || ''}
+                    alt={product.name}
+                    width={160}
+                    height={80}
+                    className='h-20 w-40 md:h-auto md:w-auto'
+                    style={{
+                        objectFit: 'contain'
+                    }}
+                />
             </div>
             <div className='mt-5 min-w-3/4 p-2 md:mt-auto md:p-5'>
                 <p>Ratings</p>
@@ -49,8 +59,8 @@ const Gridview: React.FC<ProductCardProps> = ({ product }) => {
                     </div>
                 </div>
                 <div className='addtocart flex items-center justify-center'>
-                    <button className='h-10 w-50 rounded-2xl bg-red-600 font-bold text-white md:h-12 md:w-40'>
-                        ADD TO CART
+                    <button className='h-10 w-60 rounded-2xl bg-red-700 text-xs font-bold text-white md:h-12 md:w-40'>
+                        CUSTOMIZE SELECTION
                     </button>
                 </div>
                 <div className='addtocart mt-2 flex items-center justify-center'>

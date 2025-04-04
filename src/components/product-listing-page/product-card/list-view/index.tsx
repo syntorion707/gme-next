@@ -54,8 +54,8 @@ const ListView: FC<ProductCardProps> = ({ product }) => {
                         </div>
                     </div>
                     <div className='flex flex-col items-center justify-center'>
-                        <button className='h-8 w-40 rounded-2xl bg-red-600 font-bold text-white md:h-12 md:w-60'>
-                            ADD TO CART
+                        <button className='h-8 w-40 rounded-2xl bg-red-600 text-xs font-bold text-white md:h-12 md:w-60 lg:w-70 xl:w-150'>
+                            CUSTOMIZE SELECTION
                         </button>
                         <p className='mt-2 text-xs text-gray-400'>Sku: {product.sku}</p>
                     </div>

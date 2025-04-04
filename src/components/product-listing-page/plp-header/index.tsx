@@ -14,7 +14,6 @@ type Props = {
 const PLPHeader = (props: Props) => {
     const [itemsPerPage, setItemsPerPage] = useState(5);
     const totalCount = electricianProducts.length;
-    console.log('Total', totalCount);
     const totalPages = Math.ceil(totalCount / itemsPerPage);
     const [currentPage, setCurrentPage] = useState(1);
     const [currentView, setCurrentView] = useState<'grid' | 'list'>('grid');
