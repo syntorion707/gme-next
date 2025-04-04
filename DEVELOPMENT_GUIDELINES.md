@@ -58,6 +58,16 @@ fix/profile-loading-128
 docs/readme-update-15
 ```
 
+## PR
+
+```
+git add .
+git status
+git commit -m
+```
+
+<!-- PR commit example - git commit -m "feat: Fetcher for the server and client implemented"  -->
+
 ## Component Architecture
 
 ### Structure
