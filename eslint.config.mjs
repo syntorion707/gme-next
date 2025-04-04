@@ -77,8 +77,8 @@ export default [
         rules: {
             ...nextPlugin.configs.recommended.rules,
             ...nextPlugin.configs['core-web-vitals'].rules,
-            '@next/next/no-img-element': 'off',
-            '@next/next/no-html-link-for-pages': 'off'
+            '@next/next/no-img-element': 'warn',
+            '@next/next/no-html-link-for-pages': 'warn'
         }
     },
 
@@ -96,6 +96,17 @@ export default [
             'react/no-unknown-property': 'off'
         }
     },
+
+    {
+        settings: {
+          'import/resolver': {
+            typescript: {
+              project: './tsconfig.json',
+              alwaysTryTypes: true
+            }
+          }
+        }
+      },
 
     // Prettier compatibility (MUST BE LAST)
     eslintConfigPrettier,
