@@ -11,8 +11,8 @@ interface FeaturedVideosProps {
 export const FeaturedVideos: React.FC<FeaturedVideosProps> = ({ videos }) => {
     return (
         <div className='mt-8 flex flex-col items-center px-2 py-4 md:mt-10 md:px-4 md:py-6'>
-            <span className='mb-4 w-full border-b-2 border-red-500 p-2 text-center text-2xl font-bold uppercase md:mb-8 md:text-3xl'>
-                Featured <span className='text-red-500'>Videos</span>
+            <span className='mb-4 w-full border-b-2 border-[#ce181e] p-2 text-center text-2xl font-bold uppercase md:mb-8 md:text-3xl'>
+                Featured <span className='text-[#ce181e]'>Videos</span>
             </span>
             <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
                 {videos.map((video, index) => (

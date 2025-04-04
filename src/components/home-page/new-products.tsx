@@ -45,9 +45,9 @@ export const NewProducts: React.FC<NewProductsProps> = ({ products }) => {
 
     return (
         <div className='mt-6 flex flex-col items-center bg-[#ECECEC] py-8'>
-            <h2 className='mb-4 w-full border-b-2 border-red-500 p-2 text-center text-2xl font-bold uppercase md:mb-8 md:text-3xl'>
-                What's <span className='text-red-500'>New</span>
-            </h2>
+            <span className='text-2x1 mb-4 w-full border-b-2 border-[#ce181e] p-2 text-center font-bold uppercase md:mb-8 md:text-3xl'>
+                What's <span className='text-[#ce181e]'>New</span>
+            </span>
 
             <div className='relative w-full overflow-hidden'>
                 <div className='absolute inset-y-0 -right-12 -left-12'>
@@ -81,7 +81,7 @@ export const NewProducts: React.FC<NewProductsProps> = ({ products }) => {
                                             <div
                                                 key={index}
                                                 className='relative h-[520px] bg-white shadow-md transition-all duration-300 ease-in-out hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]'>
-                                                <div className='absolute top-0 left-0 bg-red-600 px-3 py-1 text-sm font-bold text-white'>
+                                                <div className='absolute top-0 left-0 bg-[#ce181e] px-3 py-1 text-sm font-bold text-white'>
                                                     NEW!
                                                 </div>
                                                 <div className='relative mt-5 h-48'>
@@ -160,7 +160,7 @@ export const NewProducts: React.FC<NewProductsProps> = ({ products }) => {
                                                                 <span className='text-sm font-bold text-black'>
                                                                     This item ships{' '}
                                                                 </span>
-                                                                <span className='ml-1 text-sm font-bold text-red-600'>
+                                                                <span className='ml-1 text-sm font-bold text-[#ce181e]'>
                                                                     FREE
                                                                 </span>
                                                             </div>
