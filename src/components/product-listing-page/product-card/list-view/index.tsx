@@ -1,11 +1,11 @@
-import React from 'react';
 import Image from 'next/image';
+import { FC } from 'react';
 
 interface ProductCardProps {
     product: ProductType;
 }
 
-const ListView: React.FC<ProductCardProps> = ({ product }) => {
+const ListView: FC<ProductCardProps> = ({ product }) => {
     return (
         <div className='relative mt-8 flex w-full border border-gray-300 p-2'>
             <div className='absolute top-0 left-0 w-32 bg-black md:right-0'>

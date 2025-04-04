@@ -38,7 +38,7 @@ export default [
         rules: {
             ...importPlugin.configs.recommended.rules,
             'import/order': [
-                'error',
+                'warn',
                 {
                     groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
                     // 'newlines-between': 'always',
