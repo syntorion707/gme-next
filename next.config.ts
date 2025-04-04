@@ -11,7 +11,8 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'www.gmesupply.com'
+                hostname: 'www.gmesupply.com',
+                pathname: '/c/1024/**'
             }
         ]
     }

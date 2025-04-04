@@ -32,7 +32,7 @@ export const ClientFetcher = async <T>(endpoint: string, options?: RequestInit):
 export const serverFetcher = async <T>(endpoint: string, options?: RequestInit): Promise<T> => {
     try {
         const url = `${API_BASE_URL}${endpoint}`;
-        const res = await fetch(endpoint, {
+        const res = await fetch(url, {
             ...options,
             headers: {
                 'Content-Type': 'application/json',
