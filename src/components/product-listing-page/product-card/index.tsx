@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { electricianProducts } from '../dummy-data/data';
 import PLPHeader from '../plp-header';
@@ -53,13 +54,17 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
             {currentView === 'grid' ? (
                 <div className='mt-2 grid grid-cols-1 gap-8 p-4 md:grid-cols-2 md:p-6 lg:min-w-3/4 lg:grid-cols-2 xl:grid-cols-4 xl:gap-4'>
                     {paginatedProducts.map((product) => (
-                        <Gridview key={product.id} product={product} />
+                        <Link href='/pdp' key={product.id}>
+                            <Gridview key={product.id} product={product} />
+                        </Link>
                     ))}
                 </div>
             ) : (
                 <div className='grid grid-cols-1 gap-4 p-5'>
                     {paginatedProducts.map((product) => (
-                        <ListView key={product.id} product={product} />
+                        <Link href='/pdp' key={product.id}>
+                            <ListView key={product.id} product={product} />
+                        </Link>
                     ))}
                 </div>
             )}

@@ -7,7 +7,7 @@ interface ProductCardProps {
 
 const Gridview: React.FC<ProductCardProps> = ({ product }) => {
     return (
-        <div key={product.id} className='relative flex w-fit border border-gray-300 md:flex-col'>
+        <div key={product.id} className='relative flex w-full border border-gray-300 md:flex-col'>
             <div className='absolute left-0 w-32 bg-black md:right-0'>
                 <p className='p-1 text-end text-xs font-bold text-white'>MULTIPLE OPTIONS</p>
             </div>

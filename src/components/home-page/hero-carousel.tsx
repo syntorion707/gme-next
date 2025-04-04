@@ -89,7 +89,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ images, banners }) =
                         }}
                         onTransitionEnd={handleTransitionEnd}>
                         {infiniteImages.map((image, index) => (
-                            <Link key={index} href={image.href} className='relative block h-full min-w-full'>
+                            <Link key={index} href='/plp' className='relative block h-full min-w-full'>
                                 <Image
                                     src={image.src}
                                     alt={image.alt}

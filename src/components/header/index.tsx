@@ -1,15 +1,15 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const navLinks = [
-    { name: 'GME PRO', href: '#', icon: 'https://www.gmesupply.com/Content/Images/pro-logo.svg' },
-    { name: 'Gearcor', href: '#', icon: 'https://www.gmesupply.com/Content/Images/gearcor-logo.svg' },
-    { name: 'Quote', href: '#', icon: 'https://www.gmesupply.com/Content/Images/quote.svg' },
-    { name: 'Sign in', href: '#', icon: 'https://www.gmesupply.com/Content/Images/signin.svg' },
-    { name: 'Cart', href: '#', icon: 'https://www.gmesupply.com/Content/Images/cart.svg' }
+    { name: 'GME PRO', href: '/', icon: 'https://www.gmesupply.com/Content/Images/pro-logo.svg' },
+    { name: 'Gearcor', href: '/', icon: 'https://www.gmesupply.com/Content/Images/gearcor-logo.svg' },
+    { name: 'Quote', href: '/', icon: 'https://www.gmesupply.com/Content/Images/quote.svg' },
+    { name: 'Sign in', href: '/b2b', icon: 'https://www.gmesupply.com/Content/Images/signin.svg' },
+    { name: 'Cart', href: '/cart', icon: 'https://www.gmesupply.com/Content/Images/cart.svg' }
 ];
 
 export default function Header() {
@@ -20,17 +20,20 @@ export default function Header() {
         <>
             <nav className='flex items-center justify-between bg-black px-4 py-3 text-white md:px-6'>
                 <div className='flex items-center gap-4'>
-                    <img
-                        src='https://www.gmesupply.com/images/logos/gme-web-white-alt.png'
-                        alt='GME Supply Logo'
-                        width='120'
-                        height='40'
-                        className='w-28 md:w-40'
-                    />
+                    <Link href='/'>
+                        <img
+                            src='https://www.gmesupply.com/images/logos/gme-web-white-alt.png'
+                            alt='GME Supply Logo'
+                            width='120'
+                            height='40'
+                            className='w-28 cursor-pointer md:w-40'
+                        />
+                    </Link>
                     <button onClick={toggleSidebar} className='text-2xl text-white'>
                         &#9776;
                     </button>
                 </div>
+
                 <div className='mx-6 hidden flex-1 items-center justify-center md:flex'>
                     <div className='flex items-center border bg-white'>
                         <input
