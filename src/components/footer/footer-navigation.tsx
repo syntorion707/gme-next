@@ -1,12 +1,21 @@
 'use client';
 
-import React, { useState } from 'react';
 import Link from 'next/link';
+import React, { useState } from 'react';
 
 const FooterNavigation: React.FC<{
     sections: { title: string; links: { name: string; href: string }[] }[];
 }> = ({ sections }) => {
-    const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
+    const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>(() =>
+        sections.reduce(
+            (acc, section) => {
+                acc[section.title] = true; // Change to `true` if you want all open by default
+                
+return acc;
+            },
+            {} as { [key: string]: boolean }
+        )
+    );
 
     const toggleSection = (title: string) => {
         setOpenSections((prev) => ({ ...prev, [title]: !prev[title] }));

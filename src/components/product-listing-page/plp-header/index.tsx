@@ -117,7 +117,7 @@ const PLPHeader = (props: Props) => {
                         Filter
                     </button>
                 </div>
-                <div className='items-per-page hidden w-full md:hidden lg:block xl:block'>
+                <div className='items-per-page hidden w-full lg:contents xl:block'>
                     <select
                         name='page'
                         id='page'
@@ -175,7 +175,7 @@ const PLPHeader = (props: Props) => {
                         </svg>
                     </button>
                 </div>
-                <div className='view-toggle hidden w-full gap-2 md:flex lg:ml-5'>
+                <div className='view-toggle hidden w-full gap-2 md:flex'>
                     <button
                         onClick={() => handleViewChange('grid')}
                         className={`flex h-7 w-16 cursor-pointer items-center gap-1 border p-1 font-bold text-gray-500 ${
