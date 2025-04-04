@@ -1,8 +1,8 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 interface ImageData {
     src: string;
