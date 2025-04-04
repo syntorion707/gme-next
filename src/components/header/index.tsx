@@ -19,7 +19,7 @@ export default function Header() {
     return (
         <>
             <nav className='flex items-center justify-between bg-black px-4 py-3 text-white md:px-6'>
-                <div className='flex items-center gap-4'>
+                <div className='flex min-w-[160px] items-center gap-4'>
                     <Link href='/'>
                         <img
                             src='https://www.gmesupply.com/images/logos/gme-web-white-alt.png'
@@ -35,11 +35,11 @@ export default function Header() {
                 </div>
 
                 <div className='mx-6 hidden flex-1 items-center justify-center md:flex'>
-                    <div className='flex items-center border bg-white'>
+                    <div className='flex w-full max-w-[600px] items-center border bg-white'>
                         <input
                             type='search'
                             placeholder='Search for products'
-                            className='w-2xl px-6 py-2 text-gray-700 outline-none'
+                            className='w-full px-6 py-2 text-gray-700 outline-none'
                         />
                         <button className='bg-red-600 px-4 py-2 text-white'>🔍</button>
                     </div>
@@ -55,7 +55,7 @@ export default function Header() {
                         ))}
                 </div>
 
-                <div className='hidden items-center gap-6 md:flex'>
+                <div className='hidden min-w-[180px] items-center justify-end gap-6 md:flex'>
                     {navLinks.map((link) => (
                         <Link key={link.name} href={link.href} className='flex flex-col items-center'>
                             {link.icon && <Image src={link.icon} alt={link.name} width={30} height={30} />}
