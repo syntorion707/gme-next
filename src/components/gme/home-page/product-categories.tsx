@@ -14,7 +14,7 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = ({ categories
     return (
         <div className=''>
             <div className='bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15),_0_6px_20px_rgba(0,0,0,0.12)] md:p-4'>
-                <div className='grid grid-cols-1 gap-2 text-center sm:grid-cols-2 md:gap-4 lg:grid-cols-4'>
+                <div className='grid grid-cols-2 gap-2 text-center sm:grid-cols-2 md:gap-4 lg:grid-cols-4'>
                     {categories.map((category, index) => (
                         <Link
                             key={index}
@@ -31,7 +31,7 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = ({ categories
                                 </span>
                             </div>
                             <div className='flex h-full w-full justify-center'>
-                                <div className='relative h-[300px] w-full md:h-[300px]'>
+                                <div className='relative h-[150px] w-full md:h-[300px]'>
                                     <Image
                                         src={category.img}
                                         alt={category.name}
