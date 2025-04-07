@@ -1,6 +1,6 @@
 'use client';
 
-import BusinessDashBoard from './sidebar/business-dashboard';
+import BusinessDashBoard from './business-dashboard';
 
 const Account = () => {
     return <BusinessDashBoard />;

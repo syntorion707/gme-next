@@ -1,5 +1,7 @@
+import Addresses from '../../../components/account/addresses/index';
+
 const AddressesPage = () => {
-    return <div>AddressesPage</div>;
+    return <Addresses />;
 };
 
 export default AddressesPage;

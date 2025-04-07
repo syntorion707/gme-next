@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
+import { useState } from 'react';
 import EntriesSelector from './entry-selector';
 
 const BusinessDashBoard = () => {
@@ -66,8 +66,8 @@ const BusinessDashBoard = () => {
             <p className='text-primary pt-2 text-center text-2xl font-semibold uppercase md:mb-2 md:pt-0 md:text-left'>
                 Business Dashboard
             </p>
-            <div className='justify-between md:flex'>
-                <div className='md:w-2/3'>
+            <div className='justify-between xl:flex'>
+                <div className='xl:w-2/3'>
                     <div className='mb-6 rounded border border-[#bee5eb] bg-[#d1ecf1] p-4'>
                         <span className='text-[#0c5460]'>Sign up for paperless billing.</span>
                         <span className='text-blue-800'>
@@ -313,9 +313,9 @@ const BusinessDashBoard = () => {
                                             </tr>
                                         ))
                                     ) : (
-                                        <div className='p-2'>
-                                            <p>You have no shipments</p>
-                                        </div>
+                                        <tr className='p-2'>
+                                            <td className='col-span-4 p-2'>You have no shipments</td>
+                                        </tr>
                                     )}
                                 </tbody>
                             </table>
