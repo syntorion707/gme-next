@@ -6,7 +6,7 @@ interface Props {
 
 const Sidebar = ({ slug }: Props) => {
     return (
-        <div className='flex w-72 flex-col space-y-6 font-sans'>
+        <div className='flex flex-col space-y-6 pt-5 font-sans'>
             {/* Your Pro Account Menu */}
             <div>
                 <input type='checkbox' id='pro-menu-toggle' className='peer/pro-menu hidden' defaultChecked />
