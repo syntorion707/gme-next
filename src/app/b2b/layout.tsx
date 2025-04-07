@@ -1,4 +1,4 @@
-import Sidebar from '@/components/account/sidebar';
+import { B2BSidebar } from '@/components/gme/b2b';
 
 export default function RootLayout({
     children
@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
     return (
         <main className='grid grid-cols-[25%_1fr] py-4'>
-            <Sidebar />
+            <B2BSidebar />
             {children}
         </main>
     );
