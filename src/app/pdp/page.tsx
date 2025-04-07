@@ -1,5 +1,4 @@
-import React from 'react';
-import ProductDetailsPage from '@/components/product-details-page';
+import ProductDetailsPage from '@/components/gme/pdp';
 
 const pdp = () => {
     return (

@@ -1,5 +1,4 @@
-import React from 'react';
-import ProductListing from '@/components/product-listing-page';
+import ProductListing from '@/components/gme/plp';
 
 const PLP = () => {
     return (

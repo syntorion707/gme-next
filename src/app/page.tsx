@@ -1,4 +1,4 @@
-import HomePage from '@/components/home-page';
+import HomePage from '@/components/gme/home-page';
 
 export default async function Home() {
     return (
