@@ -1,8 +1,5 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import CopyRight from '@/components/footer/copy-right';
-import FooterNavigationWrapper from '@/components/footer/footer-navigation';
-import Newsletter from '@/components/footer/news-letter';
 import { AnnouncementBar, Footer, Header } from '@/components/gme/global';
 import { BodyContent } from '@/components/layouts';
 import './globals.css';
