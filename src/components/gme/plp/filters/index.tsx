@@ -44,7 +44,7 @@ const Filters = ({
     };
 
     return (
-        <div className='hidden h-fit w-fit min-w-72 overflow-hidden border border-gray-300 transition-all duration-300 lg:block xl:block'>
+        <div className='hidden h-fit w-fit min-w-72 overflow-hidden border border-gray-300 transition-all duration-300 lg:block lg:min-w-50 xl:block xl:min-w-68 2xl:min-w-[25%]'>
             {hasSelectedFilters && (
                 <div className='border-b border-gray-300 p-6'>
                     <h3 className='font-semibold'>Selected Filters</h3>

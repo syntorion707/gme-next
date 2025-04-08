@@ -10,7 +10,7 @@ export const electricianProducts: ProductType[] = [
         isOnSale: true,
         inStock: true,
         rating: 4.5,
-        imageUrl: 'https://www.gmesupply.com/c/1024//media/catalog/product/w/h/white-vent.jpg'
+        imageUrl: 'https://www.gmesupply.com/media/catalog/product/s/s/ssra1.png'
     },
     {
         id: 'prod-002',
@@ -35,12 +35,12 @@ export const electricianProducts: ProductType[] = [
         type: 'gloves',
         isOnSale: true,
         inStock: true,
-        imageUrl: 'https://www.gmesupply.com/c/1024//media/catalog/product/w/h/white-vent.jpg'
+        imageUrl: 'https://www.gmesupply.com/media/catalog/product/h/k/hk-10177640.jpg'
     },
     {
         id: 'prod-004',
         sku: 'SOL-KIT-8800',
-        name: 'Solar Panel Installation Kit',
+        name: 'Solar Panel Installation Kit Solar Panel Installation Kit Solar Panel Installation Kits',
         description: 'Complete toolkit for solar panel installation including insulated tools',
         price: 199.99,
         category: 'solar',
@@ -48,7 +48,7 @@ export const electricianProducts: ProductType[] = [
         isOnSale: false,
         inStock: true,
         rating: 4.7,
-        imageUrl: 'https://www.gmesupply.com/c/1024//media/catalog/product/w/h/white-vent.jpg'
+        imageUrl: 'https://www.gmesupply.com/media/catalog/product/f/c/fc-4151.jpg'
     },
     {
         id: 'prod-005',
@@ -60,7 +60,7 @@ export const electricianProducts: ProductType[] = [
         type: 'clothing',
         isOnSale: true,
         inStock: false,
-        imageUrl: 'https://www.gmesupply.com/c/1024//media/catalog/product/w/h/white-vent.jpg'
+        imageUrl: 'https://www.gmesupply.com/media/catalog/product/m/n/mn1_000581.jpg'
     },
     {
         id: 'prod-006',
@@ -73,7 +73,7 @@ export const electricianProducts: ProductType[] = [
         isOnSale: false,
         inStock: true,
         rating: 4.9,
-        imageUrl: 'https://www.gmesupply.com/c/1024//media/catalog/product/w/h/white-vent.jpg'
+        imageUrl: 'https://www.gmesupply.com/media/catalog/product/m/d/md_1xgl7fga6kzp2.jpg'
     },
     {
         id: 'prod-007',
@@ -85,7 +85,7 @@ export const electricianProducts: ProductType[] = [
         type: 'tool',
         isOnSale: true,
         inStock: true,
-        imageUrl: 'https://www.gmesupply.com/c/1024//media/catalog/product/w/h/white-vent.jpg'
+        imageUrl: 'https://www.gmesupply.com/media/catalog/product/a/2/a210400_pi.jpeg'
     },
     {
         id: 'prod-008',
@@ -98,7 +98,7 @@ export const electricianProducts: ProductType[] = [
         isOnSale: false,
         inStock: true,
         rating: 4.6,
-        imageUrl: 'https://www.gmesupply.com/c/1024//media/catalog/product/w/h/white-vent.jpg'
+        imageUrl: 'https://www.gmesupply.com/media/catalog/product/r/p/rp-rp3q14-r.jpg'
     },
     {
         id: 'prod-009',
@@ -111,7 +111,7 @@ export const electricianProducts: ProductType[] = [
         isOnSale: true,
         inStock: true,
         rating: 4.4,
-        imageUrl: 'https://www.gmesupply.com/c/1024//media/catalog/product/w/h/white-vent.jpg'
+        imageUrl: 'https://www.gmesupply.com/media/catalog/product/p/i/pitchpro.jpg'
     },
     {
         id: 'prod-010',
@@ -123,6 +123,6 @@ export const electricianProducts: ProductType[] = [
         type: 'tool',
         isOnSale: false,
         inStock: true,
-        imageUrl: 'https://www.gmesupply.com/c/1024//media/catalog/product/w/h/white-vent.jpg'
+        imageUrl: 'https://www.gmesupply.com/media/catalog/product/1/0/10600-front-72.jpg'
     }
 ];

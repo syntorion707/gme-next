@@ -22,12 +22,18 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
 
     const handlePageChange = (page: number, newItemsPerPage: number) => {
         setCurrentPage(page);
-        setItemsPerPage(newItemsPerPage);
+        if (newItemsPerPage) {
+            setItemsPerPage(newItemsPerPage);
+        }
     };
 
     const handleSortChange = (option: string) => {
         setSortOption(option);
         setCurrentPage(1);
+    };
+
+    const handleViewChange = (view: 'grid' | 'list') => {
+        setCurrentView(view);
     };
 
     const sortedProducts = [...electricianProducts].sort((a, b) => {
@@ -43,13 +49,16 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
     const paginatedProducts = sortedProducts.slice(startIndex, endIndex);
 
     return (
-        <div className='w-fit md:p-6'>
+        <div className='w-full'>
             <PLPHeader
+                currentPage={currentPage}
+                currentView={currentView}
                 onPageChange={handlePageChange}
                 itemsPerPage={itemsPerPage}
-                onViewChange={(view) => setCurrentView(view)}
+                onViewChange={handleViewChange}
                 onSortChange={handleSortChange}
                 onMobileFilterToggle={onMobileFilterToggle}
+                sortOption={sortOption}
             />
             {currentView === 'grid' ? (
                 <div className='mt-2 grid grid-cols-1 gap-8 p-4 md:grid-cols-2 md:p-6 lg:min-w-3/4 lg:grid-cols-2 xl:grid-cols-4 xl:gap-4'>
@@ -60,7 +69,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
                     ))}
                 </div>
             ) : (
-                <div className='grid grid-cols-1 gap-4 p-5'>
+                <div className='grid w-full grid-cols-1 gap-4 p-2'>
                     {paginatedProducts.map((product) => (
                         <Link href='/pdp' key={product.id}>
                             <ListView key={product.id} product={product} />
@@ -69,10 +78,14 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
                 </div>
             )}
             <PLPHeader
+                currentPage={currentPage}
+                currentView={currentView}
                 onPageChange={handlePageChange}
                 itemsPerPage={itemsPerPage}
-                onViewChange={(view) => setCurrentView(view)}
+                onViewChange={handleViewChange}
                 onSortChange={handleSortChange}
+                onMobileFilterToggle={onMobileFilterToggle}
+                sortOption={sortOption}
             />
         </div>
     );
