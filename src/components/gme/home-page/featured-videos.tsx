@@ -14,7 +14,7 @@ export const FeaturedVideos: React.FC<FeaturedVideosProps> = ({ videos }) => {
             <span className='mb-4 w-full border-b-2 border-[#ce181e] p-2 text-center text-2xl font-bold uppercase md:mb-8 md:text-3xl'>
                 Featured <span className='text-[#ce181e]'>Videos</span>
             </span>
-            <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3'>
                 {videos.map((video, index) => (
                     <div key={index} className='aspect-video w-full'>
                         <iframe

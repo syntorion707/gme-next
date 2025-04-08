@@ -43,7 +43,7 @@ export const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ items, link }) => 
                             <div className='flex flex-grow flex-col p-6'>
                                 <h3 className='mb-3 text-center text-lg font-semibold text-gray-800'>{item.title}</h3>
                                 <Link href={link} passHref>
-                                    <button className='text-md mx-auto mt-auto h-[40px] w-full border-2 border-[#ce181e] px-4 py-1 font-medium text-[#ce181e] transition-all duration-300 hover:bg-[#ce181e] hover:text-white sm:w-[240px]'>
+                                    <button className='text-md mx-auto mt-auto h-[40px] w-full border-2 border-[#ce181e] px-4 py-1 font-medium text-[#ce181e] transition-all duration-300 hover:bg-[#ce181e] hover:text-white sm:w-full'>
                                         Learn More
                                     </button>
                                 </Link>
@@ -55,7 +55,7 @@ export const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ items, link }) => 
                 {/* Knowledge Base Button */}
                 <div className='mt-8 text-center'>
                     <Link href={link} passHref>
-                        <button className='bg-[#ce181e] px-8 py-3 text-lg font-semibold text-white shadow-md transition-all duration-300'>
+                        <button className='bg-[#ce181e] px-4 py-1 text-lg font-semibold text-white shadow-md transition-all duration-300'>
                             Visit Knowledge Base
                         </button>
                     </Link>

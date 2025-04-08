@@ -29,8 +29,8 @@ export const TrustedBrands: React.FC<TrustedBrandsProps> = ({ brands }) => {
                                     src={brand.img}
                                     alt={brand.alt}
                                     fill
-                                    className='object-cover'
-                                    sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
+                                    className='object-fill'
+                                    // sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
                                     priority={index === 0}
                                 />
                             </div>

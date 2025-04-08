@@ -25,15 +25,17 @@ interface HeroCarouselProps {
 export const HeroCarousel: React.FC<HeroCarouselProps> = ({ images, banners }) => {
     const infiniteImages = useMemo(() => {
         if (images.length < 2) return images;
-
-        return [images[images.length - 1], ...images, images[0]];
+        
+return [images[images.length - 1], ...images, images[0]];
     }, [images]);
 
     const [currentIndex, setCurrentIndex] = useState(1);
     const [isPaused, setIsPaused] = useState(false);
     const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
-
     const totalSlides = infiniteImages.length;
+
+    const [touchStartX, setTouchStartX] = useState<number | null>(null);
+    const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
     const handleTransitionEnd = useCallback(() => {
         if (currentIndex === 0) {
@@ -50,8 +52,8 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ images, banners }) =
             const timer = setTimeout(() => {
                 setIsTransitionEnabled(true);
             }, 10);
-
-            return () => clearTimeout(timer);
+            
+return () => clearTimeout(timer);
         }
     }, [isTransitionEnabled]);
 
@@ -59,28 +61,54 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ images, banners }) =
         if (isTransitionEnabled) {
             setCurrentIndex((prev) => (prev + 1) % totalSlides);
         }
-    }, [totalSlides, isTransitionEnabled]);
+    }, [isTransitionEnabled, totalSlides]);
 
     const prevSlide = useCallback(() => {
         if (isTransitionEnabled) {
             setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
         }
-    }, [totalSlides, isTransitionEnabled]);
+    }, [isTransitionEnabled, totalSlides]);
 
     useEffect(() => {
         if (isPaused || !isTransitionEnabled) return;
         const interval = setInterval(nextSlide, 5000);
-
-        return () => clearInterval(interval);
+        
+return () => clearInterval(interval);
     }, [isPaused, nextSlide, isTransitionEnabled]);
 
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEndX(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (touchStartX !== null && touchEndX !== null) {
+            const distance = touchStartX - touchEndX;
+            const threshold = 50;
+            if (distance > threshold) {
+                nextSlide();
+            } else if (distance < -threshold) {
+                prevSlide();
+            }
+        }
+        setTouchStartX(null);
+        setTouchEndX(null);
+    };
+
     return (
-        <div className='m-2 md:m-4'>
-            <div className='flex w-full flex-col gap-4 md:flex-row'>
+        <div className='my-2 md:m-4'>
+            <div className='flex w-full flex-col gap-4 md:flex-col lg:flex-col xl:flex-row'>
+                {/* Carousel */}
                 <div
-                    className='relative h-[300px] w-full overflow-hidden sm:h-[350px] md:h-[470px] md:w-[60%]'
+                    className='relative h-[215px] overflow-hidden sm:h-[350px] md:h-[470px] md:w-[100%] lg:w-[100%] xl:w-[60%]'
                     onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}>
+                    onMouseLeave={() => setIsPaused(false)}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}>
                     <div
                         className='relative flex h-full w-full transform transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]'
                         style={{
@@ -89,7 +117,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ images, banners }) =
                         }}
                         onTransitionEnd={handleTransitionEnd}>
                         {infiniteImages.map((image, index) => (
-                            <Link key={index} href='/plp' className='relative block h-full min-w-full'>
+                            <Link key={index} href={image.href} className='relative block h-full min-w-full'>
                                 <Image
                                     src={image.src}
                                     alt={image.alt}
@@ -120,15 +148,15 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ images, banners }) =
                         ))}
                     </div>
 
-                    {/* Navigation Buttons */}
+                    {/* Navigation Buttons - only show on lg and above */}
                     <button
-                        className='absolute top-1/2 left-2 z-30 -translate-y-1/2 transform p-2 text-xl text-white/80 transition-colors duration-300 hover:text-white md:p-4 md:text-3xl'
+                        className='absolute top-1/2 left-2 z-30 hidden -translate-y-1/2 transform p-2 text-xl text-white/80 transition-colors duration-300 hover:text-white md:p-4 md:text-3xl lg:block'
                         onClick={prevSlide}
                         aria-label='Previous slide'>
                         &#10094;
                     </button>
                     <button
-                        className='absolute top-1/2 right-2 z-30 -translate-y-1/2 transform p-2 text-xl text-white/80 transition-colors duration-300 hover:text-white md:p-4 md:text-3xl'
+                        className='absolute top-1/2 right-2 z-30 hidden -translate-y-1/2 transform p-2 text-xl text-white/80 transition-colors duration-300 hover:text-white md:p-4 md:text-3xl lg:block'
                         onClick={nextSlide}
                         aria-label='Next slide'>
                         &#10095;
@@ -136,7 +164,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ images, banners }) =
                 </div>
 
                 {/* Banners section */}
-                <div className='flex w-full flex-col gap-4 md:w-[40%]'>
+                <div className='flex w-full flex-col gap-4 md:w-[100%] lg:w-[100%] xl:w-[40%]'>
                     {banners.map((banner, index) => (
                         <div key={index} className='flex h-full flex-col items-center'>
                             <Link href={banner.link} className='h-full w-full'>
@@ -149,8 +177,8 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ images, banners }) =
                                         sizes='(max-width: 768px) 100vw, 40vw'
                                     />
                                 </div>
-                                <div className='mt-2 w-full text-start'>
-                                    <p className='px-2 text-sm text-black hover:text-red-500 md:text-lg'>
+                                <div className='w-full text-start md:mt-2'>
+                                    <p className='text-sm text-black hover:text-red-500 md:px-2 md:text-lg'>
                                         {banner.text}
                                     </p>
                                 </div>
