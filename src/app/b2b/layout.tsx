@@ -6,9 +6,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <main className='grid grid-cols-[25%_1fr] py-4'>
+        <main className='grid min-h-screen grid-cols-1 pt-5 md:gap-16 xl:grid-cols-[250px_1fr]'>
             <B2BSidebar />
-            {children}
+            <section className='p-4'>{children}</section>
         </main>
     );
 }
