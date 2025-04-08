@@ -9,7 +9,7 @@ const FooterNavigation: React.FC<{
     const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>(() =>
         sections.reduce(
             (acc, section) => {
-                acc[section.title] = true; // Change to `true` if you want all open by default
+                acc[section.title] = true;
 
                 return acc;
             },
@@ -22,7 +22,7 @@ const FooterNavigation: React.FC<{
     };
 
     return (
-        <div className='grid grid-cols-1 gap-8 bg-black p-3 sm:grid-cols-2 sm:p-8 lg:grid-cols-5 lg:p-10'>
+        <div className='grid grid-cols-1 gap-8 bg-black p-3 sm:grid-cols-2 sm:p-8 lg:grid-cols-5 lg:p-2'>
             {sections.map((section, index) => (
                 <div key={index}>
                     <div
@@ -46,13 +46,14 @@ const FooterNavigation: React.FC<{
                                         </Link>
                                     </li>
                                 ))}
+                                {section.title === 'CONNECT' && (
+                                    <li className='mt-2 md:hidden'>
+                                        <button className='rounded bg-red-600 px-4 py-2 text-white'>
+                                            Easy Returns
+                                        </button>
+                                    </li>
+                                )}
                             </ul>
-
-                            {section.title === 'CONNECT' && (
-                                <div className='mt-4 md:block'>
-                                    <button className='rounded bg-red-600 px-4 py-2 text-white'>Easy Returns</button>
-                                </div>
-                            )}
                         </>
                     )}
                 </div>
@@ -119,96 +120,70 @@ const FooterNavigationWrapper: React.FC = () => {
 
     return (
         <footer className='bg-black text-white'>
-            <div className='container mx-auto py-6 sm:py-8 lg:py-0'>
+            <div className='block md:hidden'>
                 <FooterNavigation sections={navigationSections} />
             </div>
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: '20px',
-                    padding: '20px 0'
-                }}>
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '15px',
-                        flexWrap: 'wrap'
-                    }}>
-                    {['visa.jpg', 'mc.png', 'ae.png', 'paypal.png', 'afterpay.png'].map((img, idx) => (
-                        <img
-                            key={idx}
-                            src={`https://www.gmesupply.com/images/footer/${img}`}
-                            alt={img.split('.')[0]}
-                            style={{
-                                width: '50px',
-                                height: '50px',
-                                objectFit: 'contain'
-                            }}
-                        />
-                    ))}
-                </div>
 
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '15px',
-                        flexWrap: 'wrap'
-                    }}>
-                    {['nate_img.png', 'tif.jpg', 'acp.png', 'scte.png', 'fiber.png', 'sbca.gif'].map((img, idx) => (
-                        <img
-                            key={idx}
-                            src={`https://www.gmesupply.com/images/footer/${img}`}
-                            alt={img.split('.')[0]}
-                            style={{
-                                width: '150px',
-                                height: '50px',
-                                objectFit: 'contain'
-                            }}
-                        />
-                    ))}
+            <div className='hidden bg-black px-4 py-[15px] md:block lg:px-[5%]'>
+                <div className='mx-auto max-w-screen-2xl'>
+                    <div className='grid grid-cols-5 gap-y-6 text-[14px] leading-6 font-normal text-white lg:grid-cols-5 lg:gap-x-10'>
+                        {navigationSections.map((section, idx) => (
+                            <div key={idx}>
+                                <h3 className='mb-2 text-[13px] font-bold uppercase'>{section.title}</h3>
+                                <ul className='space-y-1'>
+                                    {section.links.map((link, linkIdx) => (
+                                        <li key={linkIdx}>
+                                            <a href={link.href} className='text-white'>
+                                                {link.name}
+                                            </a>
+                                        </li>
+                                    ))}
+                                    {section.title === 'CONNECT' && (
+                                        <li className='mt-2'>
+                                            <button className='rounded bg-red-600 px-4 py-2 text-white'>
+                                                Easy Returns
+                                            </button>
+                                        </li>
+                                    )}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
                 </div>
+            </div>
 
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '15px',
-                        flexWrap: 'wrap'
-                    }}>
-                    <a href='https://www.gsaadvantage.gov/ref_text/47QSWA20D002U/47QSWA20D002U_online.htm'>
-                        <img
-                            src='https://www.gmesupply.com/images/footer/gsa_img.jpg'
-                            alt='GSA'
-                            style={{
-                                width: '150px',
-                                height: '60px',
-                                objectFit: 'contain'
-                            }}
-                        />
-                    </a>
-                    <div
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '10px',
-                            color: 'white'
-                        }}>
-                        <span>POWERED BY</span>
+            <div className='bg-black py-5 text-white'>
+                <div className='flex flex-col items-center gap-4'>
+                    <div className='flex flex-wrap items-center justify-center gap-4 px-4'>
+                        {[
+                            'visa.jpg',
+                            'mc.png',
+                            'ae.png',
+                            'paypal.png',
+                            'afterpay.png',
+                            'nate_img.png',
+                            'tif.jpg',
+                            'acp.png',
+                            'gsa_img.jpg',
+                            'scte.png',
+                            'fiber.png',
+                            'sbca.gif'
+                        ].map((img, idx) => (
+                            <img
+                                key={idx}
+                                src={`https://www.gmesupply.com/images/footer/${img}`}
+                                alt={img.split('.')[0]}
+                                className={`object-contain ${idx <= 4 ? 'h-[50px] w-[50px]' : 'h-[50px] w-[140px]'}`}
+                            />
+                        ))}
+                    </div>
+
+                    <div className='flex items-center gap-2'>
+                        <span className='text-sm'>POWERED BY</span>
                         <img
                             src='https://www.gmesupply.com/images/footer/colum_img.png'
                             alt='Columbia Safety'
-                            style={{
-                                width: '150px',
-                                height: '60px',
-                                objectFit: 'contain'
-                            }}
+                            className='h-[50px] w-[150px] object-contain'
                         />
                     </div>
                 </div>
