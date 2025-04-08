@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useSort } from '../../../../hooks/useSort';
-import { getSortIndicator } from '../sortIndicator';
+import { getSortIndicator } from '../sort-indicator';
 
 const BillingAddress = () => {
     const { sortConfig, requestSort } = useSort();
