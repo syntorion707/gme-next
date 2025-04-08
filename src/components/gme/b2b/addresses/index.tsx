@@ -1,6 +1,6 @@
 import React from 'react';
-import BillingAddress from './billingAddress';
-import ShippingAddress from './shippingAddress';
+import BillingAddress from './billing-address';
+import ShippingAddress from './shipping-address';
 
 const Addresses = () => {
     return (
