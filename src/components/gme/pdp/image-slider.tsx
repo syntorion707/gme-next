@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ProductDetailsTypes } from '@/types/common';
 
-interface zoomStyleType {
+interface ZoomStyleType {
     backgroundImage?: string;
     backgroundSize?: string;
     backgroundPosition?: string;
@@ -11,7 +11,7 @@ interface zoomStyleType {
 
 const ImageSlider: React.FC<ProductDetailsTypes> = ({ product }) => {
     const [image, setImage] = useState(product.productImages[0]);
-    const [zoomStyle, setZoomStyle] = useState<zoomStyleType>({});
+    const [zoomStyle, setZoomStyle] = useState<ZoomStyleType>({});
     const [showZoom, setShowZoom] = useState(false);
     const [direction, setDirection] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
