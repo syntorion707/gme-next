@@ -13,7 +13,7 @@ type Props = {
 
 const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(5);
+    const [itemsPerPage, setItemsPerPage] = useState(16);
     const [currentView, setCurrentView] = useState<'grid' | 'list'>('grid');
     const [sortOption, setSortOption] = useState('relevance');
 

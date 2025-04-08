@@ -21,7 +21,7 @@ interface Props {
 
 const PLPHeader = (props: Props) => {
     const totalCount = electricianProducts.length;
-    const totalPages = Math.ceil(totalCount / props.itemsPerPage || 5);
+    const totalPages = Math.ceil(totalCount / props.itemsPerPage || 16);
 
     const handlePageChange = (page: number) => {
         if (page < 1 || page > totalPages) return;
@@ -36,9 +36,9 @@ const PLPHeader = (props: Props) => {
         props.onViewChange?.(view);
     };
 
-    const startItem = ((props.currentPage || 1) - 1) * (props.itemsPerPage || 5) + 1;
+    const startItem = ((props.currentPage || 1) - 1) * (props.itemsPerPage || 16) + 1;
     console.log(startItem);
-    const lastItem = Math.min((props.currentPage || 1) * (props.itemsPerPage || 5), totalCount);
+    const lastItem = Math.min((props.currentPage || 1) * (props.itemsPerPage || 16), totalCount);
     console.log(lastItem);
 
     const handleSortChange = (option: string) => {

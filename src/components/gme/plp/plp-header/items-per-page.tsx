@@ -16,11 +16,11 @@ const ItemsPerPage = (props: Props) => {
             <select
                 name='page'
                 id='page'
-                value={props.itemsPerPage || 5}
+                value={props.itemsPerPage || 16}
                 onChange={handleItemsPerPageChange}
                 className='cursor-pointer rounded border border-gray-300 p-2 text-center'>
-                <option value='4'>4 items per page</option>
-                <option value='5'>5 items per page</option>
+                <option value='12'>12 items per page</option>
+                <option value='16'>16 items per page</option>
             </select>
         </div>
     );

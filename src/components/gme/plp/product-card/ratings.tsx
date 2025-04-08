@@ -1,10 +1,14 @@
 import React from 'react';
 
-const Ratings = () => {
+interface ratingsProps {
+    product: ProductType;
+}
+
+const Ratings: React.FC<ratingsProps> = ({ product }) => {
     return (
         <div className='flex items-center gap-1'>
             {[...Array(5)].map((_, i) => {
-                const rating = 2.5;
+                const rating = product.rating || 0;
                 const starValue = i + 1;
 
                 return (
