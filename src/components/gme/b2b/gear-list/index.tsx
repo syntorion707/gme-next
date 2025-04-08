@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useRef, useState } from 'react';
 import QuickShip from '@/components/molecules/quick-ship';
 import { useOutsideClick } from '@/hooks/useOutsideClick';
@@ -309,11 +310,16 @@ const GearList = () => {
                                         </td>
                                         <td className='px-4 py-2 whitespace-nowrap'>
                                             {item.image && (
-                                                <img
-                                                    src={item.image}
-                                                    alt={item.model}
-                                                    className='h-full w-full bg-white object-cover'
-                                                />
+                                                <div className='relative h-16 w-16 min-w-[64px] bg-white'>
+                                                    <Image
+                                                        src={item.image}
+                                                        alt={item.model}
+                                                        fill
+                                                        className='object-contain p-1'
+                                                        sizes='(max-width: 640px) 64px, 96px'
+                                                        quality={80}
+                                                    />
+                                                </div>
                                             )}
                                         </td>
                                         <td className='text-primary px-4 py-2'>
