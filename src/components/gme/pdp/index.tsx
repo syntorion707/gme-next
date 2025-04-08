@@ -4,13 +4,13 @@ import React, { useRef, useState } from 'react';
 import { useScrollTrigger } from '@/hooks/useScrollTrigger';
 import ProductDescription from './description';
 import DropdownForProduct from './dropdown';
-import ImageSlider from './imageSlider';
-import ProductDetails from './productDetails';
-import QuantityButton from './quantityButton';
-import ReviewSection from './reviewSection';
-import ShortDescription from './shortDescription';
+import ImageSlider from './image-slider';
+import ProductDetails from './product-details';
+import QuantityButton from './quantity-button';
+import ReviewSection from './review-section';
+import ShortDescription from './short-description';
 import Specs from './specs';
-import WireGauge from './wireGauge';
+import WireGauge from './wire-gauge';
 
 const ProductDetailsPage = () => {
     const product = {
