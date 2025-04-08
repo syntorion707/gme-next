@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useSort } from '../../../../hooks/useSort';
 import EntriesPerPage from '../per-page-entry';
 import { getSortIndicator } from '../sortIndicator';
-import { useSort } from '../useSort';
 
 const BusinessDashBoard = () => {
     const { sortConfig, requestSort } = useSort();

@@ -1,4 +1,4 @@
-import Addresses from '@/components/gme/b2b/addresses';
+import { Addresses } from '@/components/gme/b2b';
 
 const AddressesPage = () => {
     return <Addresses />;

@@ -1,12 +1,39 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
 
-interface Props {
-    slug?: string;
-}
+const Sidebar = () => {
+    const router = usePathname();
+    const proMenuItems = [
+        { href: '/b2b', label: 'My Dashboard', isDashboard: true },
+        { href: '/b2b/addresses', label: 'Addresses', isAddress: true },
+        { href: '/b2b/orderHistory', label: 'Order History', isOrderHistory: true },
+        { href: '/b2b/groupPurchaseHistory', label: 'Group Purchase History', isGroupHistory: true },
+        { href: '/b2b/Invoices', label: 'View & Pay Invoices', isView: true },
+        { href: '/b2b/recentPayments', label: 'Recent Payments', isRecentPayment: true },
+        { href: '/b2b/gearList', label: 'Gear List', isGearList: true },
+        { href: '/b2b/marketplace', label: 'Marketplace', isMarketPlace: true },
+        { href: '/b2b/recalibration', label: 'Recalibration Tracking', isRecalibration: true },
+        { href: '/b2b/reports', label: 'My Reports', isMyReports: true },
+        { href: '/b2b/savedCarts', label: 'My saved carts', isMySavedCarts: true },
+        { href: '/b2b/quotes', label: 'Quotes', isQuotes: true }
+    ];
 
-const Sidebar = ({ slug }: Props) => {
+    const adminMenuItems = [
+        { href: '/b2b/manageUser', label: 'Manage User', isManageUser: true },
+        { href: '/b2b/alerts', label: 'Alerts', isAlerts: true },
+        { href: '/b2b/managePermissions', label: 'Manage Permissions', isManagePermissions: true },
+        { href: '/b2b/customerPaymentMethods', label: 'My Payment Methods', isCustomerPaymentMethods: true },
+        { href: '/b2b/manageFiles', label: 'Manage Files', isManageFiles: true },
+        { href: '/b2b/shippingAccounts', label: 'Shipping Accounts', isShippingAccounts: true },
+        { href: '/b2b/groups', label: 'Groups', isGroups: true },
+        { href: '/b2b/taxExempt', label: 'Tax Exempt Documents', isTaxExempt: true }
+    ];
+
     return (
-        <div className='flex flex-col space-y-6 pt-5 font-sans'>
+        <div className='flex flex-col space-y-6 font-sans md:py-5 xl:py-5'>
             {/* Your Pro Account Menu */}
             <div>
                 <input type='checkbox' id='pro-menu-toggle' className='peer/pro-menu hidden' defaultChecked />
@@ -32,67 +59,22 @@ const Sidebar = ({ slug }: Props) => {
                         />
                     </div>
                     <ul className='space-y-3 text-sm font-normal text-black'>
-                        <li>
-                            <Link href='/b2b' className='hover:text-primary flex items-center gap-2 font-semibold'>
-                                My Dashboard{' '}
-                                <span className='bg-primary rounded-full px-2 font-semibold text-white'>3</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='/b2b/addresses' className='hover:text-primary flex items-center'>
-                                Address
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='/b2b/orderHistory' className='hover:text-primary flex items-center'>
-                                Order History
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='/b2b/groupPurchaseHistory' className='hover:text-primary flex items-center'>
-                                Group Purchase History
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='/b2b/view' className='hover:text-primary flex items-center'>
-                                View & Pay Invoice
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Recent Payments
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Gear List
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Marketplace
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Recalibration Tracking
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                My Reports
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                My Saved Carts
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Quotes for my Gear Effort
-                            </Link>
-                        </li>
+                        {proMenuItems?.map((proMenuItem, i) => (
+                            <li key={i}>
+                                <Link
+                                    href={proMenuItem?.href}
+                                    className={
+                                        router === proMenuItem.href
+                                            ? `hover:text-primary flex items-center gap-2 font-semibold`
+                                            : `hover:text-primary flex items-center gap-2`
+                                    }>
+                                    {proMenuItem?.label}
+                                    {proMenuItem?.isDashboard && (
+                                        <span className='bg-primary rounded-full px-2 font-semibold text-white'>3</span>
+                                    )}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
@@ -114,46 +96,19 @@ const Sidebar = ({ slug }: Props) => {
 
                 <div className='hidden border border-gray-200 bg-[#ededef] p-4 peer-checked/admin-menu:block'>
                     <ul className='space-y-3 text-sm font-normal'>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Manage User
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Alerts
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Manage Permissions
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                My Payment Methods
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Manage Files
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Shipping Accounts
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Groups
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='#' className='hover:text-primary flex items-center'>
-                                Tax Exempt Documents
-                            </Link>
-                        </li>
+                        {adminMenuItems?.map((adminMenuItem, i) => (
+                            <li key={i}>
+                                <Link
+                                    href={adminMenuItem?.href}
+                                    className={
+                                        router === adminMenuItem.href
+                                            ? `hover:text-primary flex items-center gap-2 font-semibold`
+                                            : `hover:text-primary flex items-center gap-2`
+                                    }>
+                                    {adminMenuItem?.label}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

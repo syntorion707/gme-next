@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useSort } from '../../../../hooks/useSort';
 import { getSortIndicator } from '../sortIndicator';
-import { useSort } from '../useSort';
 
 const BillingAddress = () => {
     const { sortConfig, requestSort } = useSort();

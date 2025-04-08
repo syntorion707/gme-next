@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useSort } from '../../../../hooks/useSort';
 import EntriesPerPage from '../per-page-entry';
 import { getSortIndicator } from '../sortIndicator';
-import { useSort } from '../useSort';
 
 const ShippingAddress = () => {
     const { sortConfig, requestSort } = useSort();
@@ -109,9 +109,9 @@ const ShippingAddress = () => {
                                 Showing 1 to {addresses.length} of {addresses.length} entries
                             </div>
                             <div className='flex space-x-2'>
-                                <button className='border-none px-3 py-1'>Previous</button>
+                                <button className='cursor-pointer border-none px-3 py-1'>Previous</button>
                                 <button className='text-primary border-none px-3 py-1'>1</button>
-                                <button className='border-none px-3 py-1'>Next</button>
+                                <button className='cursor-pointer border-none px-3 py-1'>Next</button>
                             </div>
                         </div>
                     </div>
