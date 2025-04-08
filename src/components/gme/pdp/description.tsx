@@ -4,7 +4,7 @@ interface ProductDescriptionProps {
     showDescription: boolean;
     handleDescriptionClick: () => void;
     quantityButtonRef: React.RefObject<HTMLDivElement>;
-    descriptionRef: any;
+    descriptionRef: React.RefObject<HTMLDivElement>;
 }
 
 const ProductDescription: React.FC<ProductDescriptionProps> = ({

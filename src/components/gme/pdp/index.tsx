@@ -59,7 +59,7 @@ const ProductDetailsPage = () => {
 
     const quantityButtonRef = useRef<HTMLDivElement | any>(null);
     const isQuantityButtonVisible = useScrollTrigger(quantityButtonRef);
-    const descriptionRef = useRef<HTMLDivElement>(null);
+    const descriptionRef = useRef<HTMLDivElement | any>(null);
 
     const handleDescriptionClick = () => {
         setShowDescription(!showDescription);

@@ -226,13 +226,13 @@ const CategoryPage = () => {
 
     const nextSlide = useCallback(() => {
         if (isTransitionEnabled) {
-            setCurrentIndex((prev: any) => (prev + 1) % totalSlides);
+            setCurrentIndex((prev: number) => (prev + 1) % totalSlides);
         }
     }, [totalSlides, isTransitionEnabled]);
 
     const prevSlide = useCallback(() => {
         if (isTransitionEnabled) {
-            setCurrentIndex((prev: any) => (prev - 1 + totalSlides) % totalSlides);
+            setCurrentIndex((prev: number) => (prev - 1 + totalSlides) % totalSlides);
         }
     }, [totalSlides, isTransitionEnabled]);
 
