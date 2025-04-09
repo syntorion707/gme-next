@@ -1,21 +1,6 @@
-export interface NavLink {
-    name: string;
-    href: string;
-    icon: string;
-}
+export const SIGN_IN = 'Sign in';
+export const CART = 'Cart';
+export const QUOTE = 'Quote';
 
-export const getVisibilityClass = (name: string) => {
-    switch (name) {
-        case 'Sign in':
-        case 'Cart':
-            return 'flex';
-        case 'Quote':
-            return 'hidden md:flex';
-        default:
-            return 'hidden lg:flex';
-    }
-};
-
-export const isMobileVariant = (variant?: 'desktop' | 'mobile') => {
-    return variant === 'mobile';
-};
+export const MOBILE = 'mobile';
+export const DESKTOP = 'desktop';

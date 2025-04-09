@@ -1,8 +1,26 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { type NavLink, getVisibilityClass } from '@/utils/constant';
+import { CART, QUOTE, SIGN_IN } from '@/utils/constant';
+
+interface NavLink {
+    name: string;
+    href: string;
+    icon: string;
+}
 
 export default function NavLinks({ navLinks }: { navLinks: NavLink[] }) {
+    const getVisibilityClass = (name: string) => {
+        switch (name) {
+            case SIGN_IN:
+            case CART:
+                return 'flex';
+            case QUOTE:
+                return 'hidden md:flex';
+            default:
+                return 'hidden lg:flex';
+        }
+    };
+
     return (
         <div className='flex items-center gap-3 text-xs lg:mr-15 xl:-ml-4'>
             {navLinks.map((link) => (
