@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Filters from './filters';
-import MobileFilterMenu from './filters/mobile-filters-menu';
+import MobileFilterMenu from './filters/mobile-filter-menu';
 import ProductCardNew from './product-card';
 
 const ProductListing = () => {
@@ -29,9 +29,9 @@ const ProductListing = () => {
     };
 
     return (
-        <div className='w-fit font-sans'>
+        <div className='w-full font-sans'>
             <h1 className='p-3 text-end text-4xl text-red-700 lg:pr-20'>ANCHORAGE</h1>
-            <div className='lg:flex lg:gap-2 lg:p-8 xl:p-10'>
+            <div className='w-full lg:flex lg:gap-2 lg:p-8 xl:p-10'>
                 <Filters
                     selectedFilters={selectedFilters}
                     handleFilterChange={handleFilterChange}

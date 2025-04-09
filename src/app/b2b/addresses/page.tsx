@@ -1,5 +1,7 @@
+import { Addresses } from '@/components/gme/b2b';
+
 const AddressesPage = () => {
-    return <div>AddressesPage</div>;
+    return <Addresses />;
 };
 
 export default AddressesPage;

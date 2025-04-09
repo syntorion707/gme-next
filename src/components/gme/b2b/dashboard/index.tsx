@@ -2,14 +2,12 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import EntriesPerPage from './per-page-entry';
+import { useSort } from '../../../../hooks/useSort';
+import EntriesPerPage from '../per-page-entry';
+import { getSortIndicator } from '../sort-indicator';
 
-const DashBoard = () => {
-    // Sample data - replace with your actual data source
-    const [sortConfig, setSortConfig] = useState<{
-        key: string;
-        direction: 'asc' | 'desc';
-    } | null>(null);
+const BusinessDashBoard = () => {
+    const { sortConfig, requestSort } = useSort();
 
     const orders = [
         {
@@ -35,39 +33,13 @@ const DashBoard = () => {
     const recentOrders: any[] = [];
     const shipments: any[] = [];
 
-    const requestSort = (key: string) => {
-        let direction: 'asc' | 'desc' = 'asc';
-        if (sortConfig && sortConfig.key === key && sortConfig.direction === 'asc') {
-            direction = 'desc';
-        }
-        setSortConfig({ key, direction });
-    };
-
-    const getSortIndicator = (key: string) => {
-        if (!sortConfig || sortConfig.key !== key) {
-            return (
-                <span className='ml-1 flex'>
-                    <span className='text-gray-400'>↑</span>
-                    <span className='text-gray-400'>↓</span>
-                </span>
-            );
-        }
-
-        return (
-            <span className='ml-1 flex'>
-                <span className={sortConfig.direction === 'asc' ? 'text-white' : 'text-gray-400'}>↑</span>
-                <span className={sortConfig.direction === 'desc' ? 'text-white' : 'text-gray-400'}>↓</span>
-            </span>
-        );
-    };
-
     return (
         <div>
             <p className='text-primary pt-2 text-center text-2xl font-semibold uppercase md:mb-2 md:pt-0 md:text-left'>
                 Business Dashboard
             </p>
-            <div className='justify-between md:flex'>
-                <div className='md:w-2/3'>
+            <div className='justify-between xl:flex'>
+                <div className='xl:w-2/3'>
                     <div className='mb-6 rounded border border-[#bee5eb] bg-[#d1ecf1] p-4'>
                         <span className='text-[#0c5460]'>Sign up for paperless billing.</span>
                         <span className='text-blue-800'>
@@ -107,7 +79,7 @@ const DashBoard = () => {
                                                 onClick={() => requestSort('orderNumber')}>
                                                 <div className='flex items-center justify-between'>
                                                     Order#
-                                                    {getSortIndicator('orderNumber')}
+                                                    {getSortIndicator('orderNumber', sortConfig)}
                                                 </div>
                                             </th>
                                             <th
@@ -115,7 +87,7 @@ const DashBoard = () => {
                                                 onClick={() => requestSort('name')}>
                                                 <div className='flex items-center justify-between'>
                                                     Name
-                                                    {getSortIndicator('name')}
+                                                    {getSortIndicator('name', sortConfig)}
                                                 </div>
                                             </th>
                                             <th
@@ -123,7 +95,7 @@ const DashBoard = () => {
                                                 onClick={() => requestSort('total')}>
                                                 <div className='flex items-center justify-between'>
                                                     Total
-                                                    {getSortIndicator('total')}
+                                                    {getSortIndicator('total', sortConfig)}
                                                 </div>
                                             </th>
                                             <th
@@ -131,7 +103,7 @@ const DashBoard = () => {
                                                 onClick={() => requestSort('date')}>
                                                 <div className='flex items-center justify-between'>
                                                     Date
-                                                    {getSortIndicator('date')}
+                                                    {getSortIndicator('date', sortConfig)}
                                                 </div>
                                             </th>
                                             <th className='min-w-[150px] bg-black px-4 py-3 font-medium text-white'>
@@ -313,9 +285,9 @@ const DashBoard = () => {
                                             </tr>
                                         ))
                                     ) : (
-                                        <div className='p-2'>
-                                            <p>You have no shipments</p>
-                                        </div>
+                                        <tr className='p-2'>
+                                            <td className='col-span-4 p-2'>You have no shipments</td>
+                                        </tr>
                                     )}
                                 </tbody>
                             </table>
@@ -339,4 +311,4 @@ const DashBoard = () => {
     );
 };
 
-export default DashBoard;
+export default BusinessDashBoard;
