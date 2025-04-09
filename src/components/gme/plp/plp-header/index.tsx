@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { INITIAL_ITEMS_PER_PAGE, INITIAL_SORT_OPTION, VARIANT_MOBILE, VIEW_GRID, ViewType } from '@/helpers/constants';
 import { electricianProducts } from '../dummy-data/data';
 import ItemsPerPage from './items-per-page';
 import Pagination from './pagination';
@@ -12,16 +13,16 @@ interface Props {
     currentPage: number;
     itemsPerPage: number;
     onPageChange?: (page: number, itemsPerPage: number) => void;
-    onViewChange?: (view: 'grid' | 'list') => void;
+    onViewChange?: (view: ViewType) => void;
     onSortChange?: (option: string) => void;
     onMobileFilterToggle?: () => void;
-    currentView?: 'grid' | 'list';
+    currentView?: ViewType;
     sortOption?: string;
 }
 
 const PLPHeader = (props: Props) => {
     const totalCount = electricianProducts.length;
-    const totalPages = Math.ceil(totalCount / props.itemsPerPage || 16);
+    const totalPages = Math.ceil(totalCount / props.itemsPerPage || INITIAL_ITEMS_PER_PAGE);
 
     const handlePageChange = (page: number) => {
         if (page < 1 || page > totalPages) return;
@@ -32,13 +33,13 @@ const PLPHeader = (props: Props) => {
         props.onPageChange?.(1, itemsPerPage);
     };
 
-    const handleViewChange = (view: 'grid' | 'list') => {
+    const handleViewChange = (view: ViewType) => {
         props.onViewChange?.(view);
     };
 
-    const startItem = ((props.currentPage || 1) - 1) * (props.itemsPerPage || 16) + 1;
+    const startItem = ((props.currentPage || 1) - 1) * (props.itemsPerPage || INITIAL_ITEMS_PER_PAGE) + 1;
     console.log(startItem);
-    const lastItem = Math.min((props.currentPage || 1) * (props.itemsPerPage || 16), totalCount);
+    const lastItem = Math.min((props.currentPage || 1) * (props.itemsPerPage || INITIAL_ITEMS_PER_PAGE), totalCount);
     console.log(lastItem);
 
     const handleSortChange = (option: string) => {
@@ -76,11 +77,11 @@ const PLPHeader = (props: Props) => {
                     />
                 </div>
                 <div className='order-6 hidden w-full gap-2 md:order-4 md:flex md:w-auto'>
-                    <ViewSelection currentView={props.currentView || 'grid'} onViewChange={handleViewChange} />
+                    <ViewSelection currentView={props.currentView || VIEW_GRID} onViewChange={handleViewChange} />
                 </div>
 
                 <div className='order-7 mt-2 w-full md:order-5 md:mt-0 md:w-auto'>
-                    <Sorting sortOption={props.sortOption || 'relavance'} onSortChange={handleSortChange} />
+                    <Sorting sortOption={props.sortOption || INITIAL_SORT_OPTION} onSortChange={handleSortChange} />
                 </div>
             </div>
             <div className='pagination mt-2 flex justify-center gap-10 lg:gap-5 xl:hidden xl:gap-5'>
@@ -88,7 +89,7 @@ const PLPHeader = (props: Props) => {
                     currentPage={props.currentPage}
                     totalPages={totalPages}
                     onPageChange={handlePageChange}
-                    variant='mobile'
+                    variant={VARIANT_MOBILE}
                 />
             </div>
         </>

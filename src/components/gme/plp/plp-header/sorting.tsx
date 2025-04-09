@@ -1,4 +1,5 @@
 import React from 'react';
+import { SORT_OPTIONS } from '@/helpers/constants';
 
 interface sortingProps {
     sortOption: string;
@@ -19,9 +20,11 @@ const Sorting: React.FC<sortingProps> = ({ sortOption, onSortChange }) => {
                 className='w-fit cursor-pointer rounded border border-gray-300 p-2 text-start md:w-fit'
                 value={sortOption}
                 onChange={handleSortChange}>
-                <option value='relevance'>Relevance</option>
-                <option value='price-low-high'>Price (low to high)</option>
-                <option value='price-high-low'>Price (high to low)</option>
+                {SORT_OPTIONS.map(({ value, label }) => (
+                    <option key={value} value={value}>
+                        {label}
+                    </option>
+                ))}
             </select>
         </div>
     );

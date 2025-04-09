@@ -1,4 +1,5 @@
 import React from 'react';
+import { INITIAL_ITEMS_PER_PAGE, ITEMS_PER_PAGE_OPTIONs } from '@/helpers/constants';
 
 type Props = {
     itemsPerPage: number;
@@ -16,11 +17,14 @@ const ItemsPerPage = (props: Props) => {
             <select
                 name='page'
                 id='page'
-                value={props.itemsPerPage || 16}
+                value={props.itemsPerPage || INITIAL_ITEMS_PER_PAGE}
                 onChange={handleItemsPerPageChange}
                 className='cursor-pointer rounded border border-gray-300 p-2 text-center'>
-                <option value='12'>12 items per page</option>
-                <option value='16'>16 items per page</option>
+                {ITEMS_PER_PAGE_OPTIONs.map((option) => (
+                    <option key={option} value={option}>
+                        {option} items per page
+                    </option>
+                ))}
             </select>
         </div>
     );

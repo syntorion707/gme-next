@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { INITIAL_ITEMS_PER_PAGE, INITIAL_SORT_OPTION, VIEW_GRID, ViewType } from '@/helpers/constants';
 import { electricianProducts } from '../dummy-data/data';
 import PLPHeader from '../plp-header';
 import Gridview from './grid-view';
@@ -13,9 +14,9 @@ type Props = {
 
 const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(16);
-    const [currentView, setCurrentView] = useState<'grid' | 'list'>('grid');
-    const [sortOption, setSortOption] = useState('relevance');
+    const [itemsPerPage, setItemsPerPage] = useState(INITIAL_ITEMS_PER_PAGE);
+    const [currentView, setCurrentView] = useState<ViewType>(VIEW_GRID);
+    const [sortOption, setSortOption] = useState(INITIAL_SORT_OPTION);
 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -32,7 +33,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
         setCurrentPage(1);
     };
 
-    const handleViewChange = (view: 'grid' | 'list') => {
+    const handleViewChange = (view: ViewType) => {
         setCurrentView(view);
     };
 

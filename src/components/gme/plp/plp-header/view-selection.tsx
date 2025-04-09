@@ -1,19 +1,20 @@
 import React from 'react';
+import { VIEW_GRID, VIEW_LIST, ViewType } from '@/helpers/constants';
 
 type Props = {
-    currentView: 'grid' | 'list';
-    onViewChange: (view: 'grid' | 'list') => void;
+    currentView: ViewType;
+    onViewChange: (view: ViewType) => void;
 };
 
 const ViewSelection = (props: Props) => {
-    const handleViewChange = (view: 'grid' | 'list') => {
+    const handleViewChange = (view: ViewType) => {
         props.onViewChange(view);
     };
 
     return (
         <div className='flex gap-1'>
             <button
-                onClick={() => handleViewChange('grid')}
+                onClick={() => handleViewChange(VIEW_GRID)}
                 className={`flex h-7 w-16 cursor-pointer items-center gap-1 border p-1 font-bold text-gray-500 ${
                     props.currentView === 'grid'
                         ? 'rounded border-2 border-black bg-red-700 text-white'
@@ -31,7 +32,7 @@ const ViewSelection = (props: Props) => {
                 <span className='text-sm'>Grid</span>
             </button>
             <button
-                onClick={() => handleViewChange('list')}
+                onClick={() => handleViewChange(VIEW_LIST)}
                 className={`flex h-7 w-16 cursor-pointer items-center gap-1 p-1 text-gray-500 ${
                     props.currentView === 'list'
                         ? 'rounded border-2 border-black bg-red-700 text-white'
