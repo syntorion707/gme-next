@@ -12,6 +12,19 @@ const navLinks = [
     { name: 'Cart', href: '/cart', icon: 'https://www.gmesupply.com/Content/Images/cart.svg' }
 ];
 
+const categoryLinks = [
+    { name: 'Featured Brands' },
+    { name: 'Fall Protection' },
+    { name: 'PPE & Work Wear' },
+    { name: 'Lifting & Rigging' },
+    { name: 'Rope' },
+    { name: 'Rescue' },
+    { name: 'First Aid' },
+    { name: 'Tools' },
+    { name: 'Bags, Buckets, & Storage' },
+    { name: 'Devices & Testing' }
+];
+
 export default function Header() {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
     const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
@@ -100,6 +113,14 @@ export default function Header() {
                         </Link>
                     ))}
                 </ul>
+            </div>
+
+            <div className='hidden cursor-pointer justify-around gap-4 border-t-2 border-red-600 bg-black px-6 py-2 text-white md:flex'>
+                {categoryLinks.map((category, index) => (
+                    <Link href={'/category'} key={index}>
+                        <p className='text-sm lg:text-lg'>{category?.name}</p>
+                    </Link>
+                ))}
             </div>
         </>
     );
