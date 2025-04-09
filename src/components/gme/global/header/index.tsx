@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { MOBILE } from '@/utils/constant';
 import LogoWithSidebarToggle from './logo-slidebar';
 import NavLinks from './nav-links';
 import SearchBar from './search-bar';
@@ -27,7 +28,7 @@ export default function Header() {
                     <NavLinks navLinks={navLinks} />
                 </div>
             </nav>
-            <SearchBar variant='mobile' />
+            <SearchBar variant={MOBILE} />
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         </div>
     );

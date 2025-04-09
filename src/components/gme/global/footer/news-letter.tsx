@@ -21,7 +21,7 @@ const Newsletter: React.FC<SubscriptionBannerProps> = ({
     buttonText = 'Subscribe Now',
     buttonBg = 'bg-black',
     buttonTextColor = 'text-white',
-    bannerBg = 'bg-[#ce181e]',
+    bannerBg = 'bg-primary',
     textColor = 'text-white',
     socialLinks = [
         { href: 'https://www.facebook.com/gmesupply', iconClass: 'fab fa-facebook-f' },
