@@ -19,12 +19,13 @@ export default function Header() {
     const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
     return (
-        <div className='sticky top-0 z-50'>
+        <div className='top-0 z-50 md:sticky'>
             <nav className='flex items-center justify-between bg-black px-4 py-3 text-white md:px-6'>
                 <LogoWithSidebarToggle toggleSidebar={toggleSidebar} />
                 <SearchBar />
-                <NavLinks navLinks={navLinks} isMobile />
-                <NavLinks navLinks={navLinks} />
+                <div className='flex shrink-0 items-center gap-4'>
+                    <NavLinks navLinks={navLinks} />
+                </div>
             </nav>
             <SearchBar variant='mobile' />
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />

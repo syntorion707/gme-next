@@ -46,13 +46,6 @@ const FooterNavigation: React.FC<{
                                         </Link>
                                     </li>
                                 ))}
-                                {section.title === 'CONNECT' && (
-                                    <li className='mt-2 md:hidden'>
-                                        <button className='rounded bg-red-600 px-4 py-2 text-white'>
-                                            Easy Returns
-                                        </button>
-                                    </li>
-                                )}
                             </ul>
                         </>
                     )}
@@ -126,7 +119,7 @@ const FooterNavigationWrapper: React.FC = () => {
 
             <div className='hidden bg-black px-4 py-[15px] md:block lg:px-[5%]'>
                 <div className='mx-auto max-w-screen-2xl'>
-                    <div className='grid grid-cols-5 gap-y-6 text-[14px] leading-6 font-normal text-white lg:grid-cols-5 lg:gap-x-10'>
+                    <div className='ml-5 grid grid-cols-5 gap-y-6 text-[14px] leading-6 font-normal text-white lg:grid-cols-5 lg:gap-x-10'>
                         {navigationSections.map((section, idx) => (
                             <div key={idx}>
                                 <h3 className='mb-2 text-[13px] font-bold uppercase'>{section.title}</h3>
