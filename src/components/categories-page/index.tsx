@@ -185,7 +185,7 @@ const CategoryPage = () => {
         <div className='mt-2 py-4 font-sans'>
             <div className='grid grid-cols-1 gap-4 lg:grid-cols-2'>
                 <p className='text-xs md:text-sm'>Home {'>'} Fall Protection</p>
-                <h1 className='px-4 text-center text-lg text-red-700 uppercase md:text-4xl lg:text-end'>
+                <h1 className='text-primary px-4 text-center text-lg uppercase md:text-4xl lg:text-end'>
                     Fall Protection
                 </h1>
             </div>
@@ -251,7 +251,7 @@ const CategoryPage = () => {
                                     return (
                                         <div key={subIndex} className='py-2'>
                                             <div className='flex h-[25%] w-full justify-center'>
-                                                <h2 className='cursor-pointer py-4 text-center text-sm font-bold hover:text-red-700 md:py-2'>
+                                                <h2 className='hover:text-primary cursor-pointer py-4 text-center text-sm font-bold md:py-2'>
                                                     {subCategory.name}
                                                 </h2>
                                             </div>

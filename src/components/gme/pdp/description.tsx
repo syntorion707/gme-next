@@ -15,7 +15,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = ({
 }) => {
     return (
         <div>
-            <div ref={quantityButtonRef} className='flex justify-between rounded-b-lg border-b-2 border-red-700 py-2'>
+            <div ref={quantityButtonRef} className='border-primary flex justify-between rounded-b-lg border-b-2 py-2'>
                 <p ref={descriptionRef} className='text-md font-bold md:text-lg'>
                     Description
                 </p>
