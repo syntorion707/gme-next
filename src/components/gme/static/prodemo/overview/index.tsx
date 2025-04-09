@@ -5,9 +5,11 @@ import BannerSection from '@/components/gme/static/prodemo/components/BannerSect
 import VideoModal from '@/components/gme/static/prodemo/components/VideoModel';
 import { FullWidthLayout } from '@/components/layouts';
 import NavSection from '../components/NavSection';
+import ScheduleDemoModal from '../components/ScheduleDemoModel';
 
 const Overview = () => {
     const [showVideoModel, setShowVideoModel] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <div className='-mx-[6%]'>
@@ -20,13 +22,16 @@ const Overview = () => {
                 subtitle='Seamlessly manage your equipment purchasing process.'
                 buttons={[
                     { label: 'Sign In', href: '/login', variant: 'secondary' },
-                    { label: 'Schedule A Demo', href: '/demo', variant: 'primary' },
+                    { label: 'Schedule A Demo', onClick: () => setIsModalOpen(true), variant: 'primary' },
                     { label: 'Watch Video', onClick: () => setShowVideoModel(true), variant: 'secondary' }
                 ]}
             />
 
             {/* { Watch A Video} */}
             <VideoModal showVideoModel={showVideoModel} setShowVideoModel={setShowVideoModel} />
+
+            {/* {Schedule A Demo} */}
+            <ScheduleDemoModal isModalOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
             {/* NAV SECTION */}
             <NavSection />

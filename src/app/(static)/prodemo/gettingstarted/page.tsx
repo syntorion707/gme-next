@@ -1,5 +1,5 @@
-const GettingStarted = () => {
-    return <>GettingStarted Page</>;
-};
+import GettingStarted from '@/components/gme/static/prodemo/gettingstarted';
 
-export default GettingStarted;
+export default function Page() {
+    return <GettingStarted />;
+}

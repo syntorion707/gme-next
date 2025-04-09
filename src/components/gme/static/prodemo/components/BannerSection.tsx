@@ -47,7 +47,7 @@ const BannerSection: React.FC<BannerSectionProps> = ({
                                 href={btn.href}
                                 className={`${
                                     btn.variant === 'primary' ? 'bg-red-600 text-white' : 'bg-gray-200 text-red-700'
-                                } w-full rounded px-6 py-2 text-center font-semibold shadow sm:w-48`}>
+                                } w-full cursor-pointer rounded px-6 py-2 text-center font-semibold shadow sm:w-48`}>
                                 {btn.label}
                             </a>
                         ) : (
@@ -56,7 +56,7 @@ const BannerSection: React.FC<BannerSectionProps> = ({
                                 onClick={btn.onClick}
                                 className={`${
                                     btn.variant === 'primary' ? 'bg-red-600 text-white' : 'bg-gray-200 text-red-700'
-                                } w-full rounded px-6 py-2 font-semibold shadow sm:w-48`}>
+                                } w-full cursor-pointer rounded px-6 py-2 font-semibold shadow sm:w-48`}>
                                 {btn.label}
                             </button>
                         )
