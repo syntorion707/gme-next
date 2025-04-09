@@ -1,5 +1,5 @@
-const HowItWorks = () => {
-    return <>How it works.</>;
-};
+import HowItWorks from '@/components/gme/static/prodemo/howitworks';
 
-export default HowItWorks;
+export default function Page() {
+    return <HowItWorks />;
+}

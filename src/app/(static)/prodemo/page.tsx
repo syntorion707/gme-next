@@ -1,3 +1,5 @@
+import Overview from '@/components/gme/static/prodemo/overview';
+
 export default function Page() {
-    return <>This is the Pro Demo Overview page.</>;
+    return <Overview />;
 }
