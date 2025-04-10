@@ -44,16 +44,16 @@ const Filters = ({
     };
 
     return (
-        <div className='hidden h-fit w-fit min-w-72 overflow-hidden border border-gray-300 transition-all duration-300 lg:block lg:min-w-50 xl:block xl:min-w-68 2xl:min-w-[25%]'>
+        <div className='border-my-border-grey hidden h-fit w-fit min-w-72 overflow-hidden border transition-all duration-300 lg:block lg:min-w-50 xl:block xl:min-w-68 2xl:min-w-[25%]'>
             {hasSelectedFilters && (
-                <div className='border-b border-gray-300 p-6'>
+                <div className='border-my-border-grey border-b p-6'>
                     <h3 className='font-semibold'>Selected Filters</h3>
                     <div className='mt-4 flex flex-col gap-2'>
                         {selectedFilters.brimType.map((filter) => (
                             <div key={`color-${filter}`} className='flex items-center'>
                                 <button
                                     onClick={() => removeFilter('brimType', filter)}
-                                    className='text-center text-red-600'>
+                                    className='text-primary text-center'>
                                     <svg
                                         xmlns='http://www.w3.org/2000/svg'
                                         width='18'
@@ -75,7 +75,7 @@ const Filters = ({
                             <div key={`color-${filter}`} className='flex items-center'>
                                 <button
                                     onClick={() => removeFilter('color', filter)}
-                                    className='text-center text-red-600'>
+                                    className='text-primary text-center'>
                                     <svg
                                         xmlns='http://www.w3.org/2000/svg'
                                         width='18'
@@ -97,7 +97,7 @@ const Filters = ({
                             <div key={`color-${filter}`} className='flex items-center'>
                                 <button
                                     onClick={() => removeFilter('manufacturer', filter)}
-                                    className='text-center text-red-600'>
+                                    className='text-primary text-center'>
                                     <svg
                                         xmlns='http://www.w3.org/2000/svg'
                                         width='18'
@@ -116,7 +116,7 @@ const Filters = ({
                             </div>
                         ))}
                     </div>
-                    <div className='mt-2 flex h-8 w-30 items-center rounded-full border border-red-600 text-red-700 hover:bg-red-700 hover:text-white'>
+                    <div className='border-primary text-primary hover:bg-primary mt-2 flex h-8 w-30 items-center rounded-full border hover:text-white'>
                         <button onClick={handleClearFilters} className='cursor-pointer'>
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
@@ -135,9 +135,9 @@ const Filters = ({
                 </div>
             )}
 
-            <div className='border-b border-gray-300 p-6'>
+            <div className='border-my-border-grey hover:text-primary border-b p-6'>
                 <div
-                    className='flex cursor-pointer items-center justify-between hover:text-red-700'
+                    className='hover:text-primary flex cursor-pointer items-center justify-between'
                     onClick={() => toggleFilter('brimType')}>
                     <h3 className='font-semibold'>Brim Type</h3>
                     <svg
@@ -161,13 +161,9 @@ const Filters = ({
                                     id={`brim-${type}`}
                                     checked={selectedFilters.brimType.includes(type)}
                                     onChange={(e) => handleFilterChange('brimType', type, e.target.checked)}
-                                    className={`mr-2 h-4 w-4 cursor-pointer rounded-full border-2 border-gray-300 text-red-600 accent-red-600 transition-all duration-200 hover:rounded-full hover:ring-2 hover:ring-gray-500 hover:ring-offset-2 hover:outline-none focus:rounded-full focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-none ${
-                                        selectedFilters.brimType.includes(type)
-                                            ? 'border-red-300 bg-red-100'
-                                            : 'bg-white'
-                                    } `}
+                                    className={`border-my-border-grey text-primary accent-primary hover:ring-secondary focus:ring-secondary mr-2 h-4 w-4 cursor-pointer rounded-full border-2 transition-all duration-200 hover:rounded-full hover:ring-2 hover:ring-offset-2 hover:outline-none focus:rounded-full focus:ring-2 focus:ring-offset-2 focus:outline-none`}
                                 />
-                                <label htmlFor={`brim-${type}`} className='cursor-pointer text-gray-700'>
+                                <label htmlFor={`brim-${type}`} className='text-secondary cursor-pointer'>
                                     {type}
                                 </label>
                             </div>
@@ -176,10 +172,8 @@ const Filters = ({
                 )}
             </div>
 
-            <div className='border-b border-gray-300 p-6'>
-                <div
-                    className='flex cursor-pointer items-center justify-between hover:text-red-700'
-                    onClick={() => toggleFilter('color')}>
+            <div className='border-my-border-grey hover:text-primary border-b p-6'>
+                <div className='flex cursor-pointer items-center justify-between' onClick={() => toggleFilter('color')}>
                     <h3 className='font-semibold'>Color</h3>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -200,9 +194,7 @@ const Filters = ({
                                     id={`color-${color}`}
                                     checked={selectedFilters.color.includes(color)}
                                     onChange={(e) => handleFilterChange('color', color, e.target.checked)}
-                                    className={`mr-2 h-4 w-4 cursor-pointer rounded-full border-2 border-gray-300 text-red-600 accent-red-600 transition-all duration-200 hover:rounded-full hover:ring-2 hover:ring-gray-500 hover:ring-offset-2 hover:outline-none focus:rounded-full focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-none ${
-                                        selectedFilters.color.includes(color) ? 'border-red-300 bg-red-100' : 'bg-white'
-                                    } `}
+                                    className={`border-my-border-grey text-primary accent-primary hover:ring-secondary focus:ring-secondary mr-2 h-4 w-4 cursor-pointer rounded-full border-2 transition-all duration-200 hover:rounded-full hover:ring-2 hover:ring-offset-2 hover:outline-none focus:rounded-full focus:ring-2 focus:ring-offset-2 focus:outline-none`}
                                 />
                                 <label htmlFor={`color-${color}`} className='text-gray-700'>
                                     {color}
@@ -213,7 +205,7 @@ const Filters = ({
                 )}
             </div>
 
-            <div className='border-b border-gray-300 p-6 hover:text-red-700'>
+            <div className='border-my-border-grey hover:text-primary border-b p-6'>
                 <div
                     className='flex cursor-pointer items-center justify-between'
                     onClick={() => toggleFilter('manufacturer')}>
@@ -239,13 +231,9 @@ const Filters = ({
                                     id={`manufacturer-${brand}`}
                                     checked={selectedFilters.manufacturer.includes(brand)}
                                     onChange={(e) => handleFilterChange('manufacturer', brand, e.target.checked)}
-                                    className={`mr-2 h-4 w-4 cursor-pointer rounded-full border-2 border-gray-300 text-red-600 accent-red-600 transition-all duration-200 hover:rounded-full hover:ring-2 hover:ring-gray-500 hover:ring-offset-2 hover:outline-none focus:rounded-full focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-none ${
-                                        selectedFilters.manufacturer.includes(brand)
-                                            ? 'border-red-300 bg-red-100'
-                                            : 'bg-white'
-                                    } `}
+                                    className={`text-primary accent-primary border-my-border-grey hover:ring-secondary focus:ring-secondary mr-2 h-4 w-4 cursor-pointer rounded-full border-2 transition-all duration-200 hover:rounded-full hover:ring-2 hover:ring-offset-2 hover:outline-none focus:rounded-full focus:ring-2 focus:ring-offset-2 focus:outline-none`}
                                 />
-                                <label htmlFor={`manufacturer-${brand}`} className='text-gray-700'>
+                                <label htmlFor={`manufacturer-${brand}`} className='text-secondary'>
                                     {brand}
                                 </label>
                             </div>
