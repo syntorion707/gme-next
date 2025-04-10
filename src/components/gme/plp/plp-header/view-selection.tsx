@@ -3,11 +3,11 @@ import { VIEW_GRID, VIEW_LIST } from '@/helpers/constants';
 
 type Props = {
     currentView: string;
-    onViewChange: (view: string) => void;
+    onViewChange: (view: 'grid' | 'list') => void;
 };
 
 const ViewSelection = (props: Props) => {
-    const handleViewChange = (view: string) => {
+    const handleViewChange = (view: 'grid' | 'list') => {
         props.onViewChange(view);
     };
 
