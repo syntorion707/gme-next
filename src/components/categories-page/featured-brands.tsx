@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface BrandsProps {
@@ -85,10 +86,11 @@ const FeaturedBrandsModal: React.FC<BrandsProps> = ({ onClose }) => {
                     </div>
 
                     <div className='mt-4'>
-                        <h3 className='text-primary text-md mb-4 cursor-pointer font-semibold md:text-lg'>
-                            Shop All Brands
-                        </h3>
-
+                        <Link href={'/allbrands'}>
+                            <h3 className='text-primary text-md mb-4 cursor-pointer font-semibold md:text-lg'>
+                                Shop All Brands
+                            </h3>
+                        </Link>
                         <div className='grid max-h-[400px] w-[95%] grid-cols-3 gap-3 overflow-y-auto pr-1 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6'>
                             {brands.map((brand, index) => (
                                 <div key={index} className='flex h-35 w-full items-center justify-center bg-white p-2'>
@@ -104,9 +106,11 @@ const FeaturedBrandsModal: React.FC<BrandsProps> = ({ onClose }) => {
                         </div>
 
                         <div className='my-4'>
-                            <h3 className='text-primary text-md cursor-pointer text-right font-semibold md:text-lg'>
-                                Shop All Brands
-                            </h3>
+                            <Link href={'/allbrands'}>
+                                <h3 className='text-primary text-md cursor-pointer text-right font-semibold md:text-lg'>
+                                    Shop All Brands
+                                </h3>
+                            </Link>
                         </div>
                     </div>
                 </div>
