@@ -10,8 +10,8 @@ export const FooterNavigation: React.FC<{
         sections.reduce(
             (acc, section) => {
                 acc[section.title] = true;
-                
-return acc;
+
+                return acc;
             },
             {} as { [key: string]: boolean }
         )
@@ -28,7 +28,7 @@ return acc;
                     <div
                         className='flex cursor-pointer items-center justify-between'
                         onClick={() => toggleSection(section.title)}>
-                        <h3 className='mb-2 w-full text-[13px] font-bold tracking-wide text-white uppercase md:w-auto'>
+                        <h3 className='mb-2 w-full text-[17px] font-bold tracking-wide text-white uppercase md:w-auto'>
                             {section.title}
                         </h3>
                         <span className='text-xl text-white md:hidden'>
@@ -37,7 +37,7 @@ return acc;
                     </div>
 
                     {openSections[section.title] && (
-                        <ul className='space-y-1 text-sm text-white'>
+                        <ul className='text-md space-y-1 text-white'>
                             {section.links.map((link, idx) => (
                                 <li key={idx}>
                                     <Link href={link.href} className='transition duration-200 hover:text-red-500'>

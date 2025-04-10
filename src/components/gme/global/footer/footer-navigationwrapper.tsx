@@ -60,10 +60,9 @@ export const FooterNavigationWrapper: React.FC = () => {
     return (
         <footer className='bg-black text-white'>
             <FooterNavigation sections={sections} />
-
             <div className='bg-black py-5 text-white'>
-                <div className='flex flex-col items-center gap-4'>
-                    <div className='flex flex-wrap items-center justify-center gap-4 px-4'>
+                <div className='flex flex-col items-center gap-4 overflow-hidden'>
+                    <div className='flex flex-wrap items-center justify-center gap-4 px-10'>
                         {[
                             'visa.jpg',
                             'mc.png',
