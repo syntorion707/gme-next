@@ -38,11 +38,11 @@ const ReviewSection = () => {
             ) : (
                 <div className='p-2 text-center'>
                     <h1 className='text-xl font-bold md:text-2xl'>Questions & Answers</h1>
-                    <p className='text-md mt-10 font-bold text-red-500 md:text-lg'>Have a question?</p>
+                    <p className='text-md text-primary mt-10 font-bold md:text-lg'>Have a question?</p>
                     <p className='md:text-md mt-2 text-sm text-gray-500'>
                         Be the first to ask something about this product.
                     </p>
-                    <button className='mt-2 h-10 w-48 cursor-pointer rounded-full bg-red-700 p-2 font-bold text-white'>
+                    <button className='bg-primary mt-2 h-10 w-48 cursor-pointer rounded-full p-2 font-bold text-white'>
                         Ask a question
                     </button>
                 </div>

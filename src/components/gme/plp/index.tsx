@@ -30,7 +30,7 @@ const ProductListing = () => {
 
     return (
         <div className='w-full font-sans'>
-            <h1 className='p-3 text-end text-4xl text-red-700 lg:pr-20'>ANCHORAGE</h1>
+            <h1 className='text-primary p-3 text-end text-4xl lg:pr-20'>ANCHORAGE</h1>
             <div className='w-full lg:flex lg:gap-2 lg:p-8 xl:p-10'>
                 <Filters
                     selectedFilters={selectedFilters}
@@ -48,7 +48,7 @@ const ProductListing = () => {
                                 <div className='mb-4 flex items-center justify-end pb-4'>
                                     <button
                                         onClick={() => setIsMobileFilterOpen(false)}
-                                        className='flex h-8 w-10 items-center justify-center rounded-md border border-gray-300 p-1 text-gray-500 hover:text-gray-700'>
+                                        className='border-my-border-grey text-secondary flex h-8 w-10 items-center justify-center rounded-md border p-1 hover:text-gray-700'>
                                         <svg
                                             xmlns='http://www.w3.org/2000/svg'
                                             width='24'

@@ -1,11 +1,20 @@
 import React from 'react';
 
-const QuickShipSwitch = () => {
+interface QuickShipSwitchProps {
+    enabled: boolean;
+    onToggle: (enabled: boolean) => void;
+}
+const QuickShipSwitch = ({ enabled, onToggle }: QuickShipSwitchProps) => {
     return (
         <div className='flex items-center gap-1'>
             <label className='relative inline-block h-5 w-10'>
-                <input type='checkbox' className='peer hidden' />
-                <span className='absolute inset-0 cursor-pointer rounded-full bg-gray-500 transition duration-300 peer-checked:bg-green-500'></span>
+                <input
+                    type='checkbox'
+                    className='peer hidden'
+                    checked={enabled}
+                    onChange={(e) => onToggle(e.target.checked)}
+                />
+                <span className='bg-secondary absolute inset-0 cursor-pointer rounded-full transition duration-300 peer-checked:bg-green-500'></span>
                 <span className='absolute top-1 left-1 h-3 w-3 rounded-full bg-white transition-transform duration-300 peer-checked:translate-x-4'></span>
             </label>
             <div className='flex items-center gap-1'>

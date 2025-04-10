@@ -41,16 +41,16 @@ const MobileFilterMenu = ({
     };
 
     return (
-        <div className='border border-gray-300 p-5'>
+        <div className='border-my-border-grey border p-5'>
             {hasSelectedFilters && (
-                <div className='border-b border-gray-300 p-6'>
+                <div className='border-my-border-grey border-b p-6'>
                     <h3 className='font-semibold'>Selected Filters</h3>
                     <div className='mt-4 flex flex-col gap-2'>
                         {selectedFilters.brimType.map((filter) => (
                             <div key={`color-${filter}`} className='flex items-center'>
                                 <button
                                     onClick={() => removeFilter('brimType', filter)}
-                                    className='text-center text-red-600'>
+                                    className='text-primary text-center'>
                                     <svg
                                         xmlns='http://www.w3.org/2000/svg'
                                         width='18'
@@ -72,7 +72,7 @@ const MobileFilterMenu = ({
                             <div key={`color-${filter}`} className='flex items-center'>
                                 <button
                                     onClick={() => removeFilter('color', filter)}
-                                    className='text-center text-red-600'>
+                                    className='text-primary text-center'>
                                     <svg
                                         xmlns='http://www.w3.org/2000/svg'
                                         width='18'
@@ -94,7 +94,7 @@ const MobileFilterMenu = ({
                             <div key={`color-${filter}`} className='flex items-center'>
                                 <button
                                     onClick={() => removeFilter('manufacturer', filter)}
-                                    className='text-center text-red-600'>
+                                    className='text-primary text-center'>
                                     <svg
                                         xmlns='http://www.w3.org/2000/svg'
                                         width='18'
@@ -113,7 +113,7 @@ const MobileFilterMenu = ({
                             </div>
                         ))}
                     </div>
-                    <div className='mt-2 flex h-8 w-30 items-center rounded-full border border-red-600 text-red-700 hover:bg-red-700 hover:text-white'>
+                    <div className='border-primary text-primary hover:bg-primary mt-2 flex h-8 w-30 items-center rounded-full border hover:text-white'>
                         <button onClick={handleClearFilters} className='cursor-pointer'>
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
@@ -131,7 +131,7 @@ const MobileFilterMenu = ({
                     </div>
                 </div>
             )}
-            <div className='border-b border-gray-300 p-6 pb-4'>
+            <div className='border-my-border-grey border-b p-6 pb-4'>
                 <div
                     className='flex cursor-pointer items-center justify-between'
                     onClick={() => toggleFilter('brimType')}>
@@ -157,9 +157,9 @@ const MobileFilterMenu = ({
                                     id={`brim-${type}`}
                                     checked={selectedFilters.brimType.includes(type)}
                                     onChange={(e) => handleFilterChange('brimType', type, e.target.checked)}
-                                    className='mr-2 h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500'
+                                    className='border-my-border-grey text-primar focus:primary mr-2 h-4 w-4 rounded'
                                 />
-                                <label htmlFor={`brim-${type}`} className='text-gray-700'>
+                                <label htmlFor={`brim-${type}`} className='text-secondary'>
                                     {type}
                                 </label>
                             </div>
@@ -168,7 +168,7 @@ const MobileFilterMenu = ({
                 )}
             </div>
 
-            <div className='border-b border-gray-300 p-6 pb-4'>
+            <div className='border-my-border-grey border-b p-6 pb-4'>
                 <div className='flex cursor-pointer items-center justify-between' onClick={() => toggleFilter('color')}>
                     <h3 className='font-semibold'>Color</h3>
                     <svg
@@ -190,9 +190,9 @@ const MobileFilterMenu = ({
                                     id={`color-${color}`}
                                     checked={selectedFilters.color.includes(color)}
                                     onChange={(e) => handleFilterChange('color', color, e.target.checked)}
-                                    className='mr-2 h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500'
+                                    className='border-my-border-grey text-primary focus:ring-primary mr-2 h-4 w-4 rounded'
                                 />
-                                <label htmlFor={`color-${color}`} className='text-gray-700'>
+                                <label htmlFor={`color-${color}`} className='text-secondary'>
                                     {color}
                                 </label>
                             </div>
@@ -227,9 +227,9 @@ const MobileFilterMenu = ({
                                     id={`manufacturer-${brand}`}
                                     checked={selectedFilters.manufacturer.includes(brand)}
                                     onChange={(e) => handleFilterChange('manufacturer', brand, e.target.checked)}
-                                    className='mr-2 h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500'
+                                    className='border-my-border-grey text-primary focus:ring-primary mr-2 h-4 w-4 rounded'
                                 />
-                                <label htmlFor={`manufacturer-${brand}`} className='text-gray-700'>
+                                <label htmlFor={`manufacturer-${brand}`} className='text-secondary'>
                                     {brand}
                                 </label>
                             </div>

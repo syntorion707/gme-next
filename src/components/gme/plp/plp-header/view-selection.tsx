@@ -1,23 +1,24 @@
 import React from 'react';
+import { VIEW_GRID, VIEW_LIST } from '@/helpers/constants';
 
 type Props = {
-    currentView: 'grid' | 'list';
-    onViewChange: (view: 'grid' | 'list') => void;
+    currentView: string;
+    onViewChange: (view: string) => void;
 };
 
 const ViewSelection = (props: Props) => {
-    const handleViewChange = (view: 'grid' | 'list') => {
+    const handleViewChange = (view: string) => {
         props.onViewChange(view);
     };
 
     return (
         <div className='flex gap-1'>
             <button
-                onClick={() => handleViewChange('grid')}
-                className={`flex h-7 w-16 cursor-pointer items-center gap-1 border p-1 font-bold text-gray-500 ${
+                onClick={() => handleViewChange(VIEW_GRID)}
+                className={`text-secondary flex h-7 w-16 cursor-pointer items-center gap-1 border p-1 font-bold ${
                     props.currentView === 'grid'
-                        ? 'rounded border-2 border-black bg-red-700 text-white'
-                        : 'border border-gray-400'
+                        ? 'bg-primary rounded border-2 border-black text-white'
+                        : 'border-my-border-grey border'
                 }`}>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -31,11 +32,11 @@ const ViewSelection = (props: Props) => {
                 <span className='text-sm'>Grid</span>
             </button>
             <button
-                onClick={() => handleViewChange('list')}
-                className={`flex h-7 w-16 cursor-pointer items-center gap-1 p-1 text-gray-500 ${
+                onClick={() => handleViewChange(VIEW_LIST)}
+                className={`text-secondary flex h-7 w-16 cursor-pointer items-center gap-1 p-1 ${
                     props.currentView === 'list'
-                        ? 'rounded border-2 border-black bg-red-700 text-white'
-                        : 'border border-gray-500'
+                        ? 'bg-primary rounded border-2 border-black text-white'
+                        : 'border-my-border-grey border'
                 }`}>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
