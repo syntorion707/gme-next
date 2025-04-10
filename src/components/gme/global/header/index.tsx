@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const navLinks = [
-    { name: 'GME PRO', href: '/', icon: 'https://www.gmesupply.com/Content/Images/pro-logo.svg' },
+    { name: 'GME PRO', href: '/prodemo', icon: 'https://www.gmesupply.com/Content/Images/pro-logo.svg' },
     { name: 'Gearcor', href: '/', icon: 'https://www.gmesupply.com/Content/Images/gearcor-logo.svg' },
     { name: 'Quote', href: '/quote-request', icon: 'https://www.gmesupply.com/Content/Images/quote.svg' },
     { name: 'Sign in', href: '/b2b', icon: 'https://www.gmesupply.com/Content/Images/signin.svg' },
