@@ -23,7 +23,7 @@ export const ClientFetcher = async <T>(endpoint: string, options?: RequestInit):
             throw new Error(error?.message || 'API request failed');
         }
 
-        return res.json() as Promise<T>;
+        return (await res.json()) as T;
     } catch (error) {
         return error as T;
     }
@@ -45,7 +45,7 @@ export const serverFetcher = async <T>(endpoint: string, options?: RequestInit):
             throw new Error(error?.message || 'Failed to fetch data');
         }
 
-        return res.json() as Promise<T>;
+        return (await res.json()) as T;
     } catch (error) {
         return error as T;
     }

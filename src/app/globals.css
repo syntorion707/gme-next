@@ -4,12 +4,16 @@
     --background: #ffffff;
     --foreground: #212529;
     --primary: #ce181e;
+    --secondary: #6c757d;
+    --my-border-grey: #dee2e6;
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-my-border-grey: var(--my-border-grey);
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 }
