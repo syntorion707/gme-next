@@ -15,7 +15,7 @@ const Specs: React.FC<ProductDetailsTypes> = ({ product }) => {
 
     return (
         <div>
-            <div className='mt-2 flex justify-between rounded-b-lg border-b-2 border-red-700 py-2'>
+            <div className='border-primary mt-2 flex justify-between rounded-b-lg border-b-2 py-2'>
                 <p className='text-md font-bold md:text-lg'>Specs</p>
 
                 {showSpecs ? (
