@@ -1,5 +1,5 @@
 import CopyRight from './copy-right';
-import FooterNavigationWrapper from './footer-navigation';
+import FooterNavigationWrapper from './footer-navigationwrapper';
 import Newsletter from './news-letter';
 
 const Footer = () => {

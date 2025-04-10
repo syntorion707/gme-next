@@ -22,7 +22,7 @@ export default function NavLinks({ navLinks }: { navLinks: NavLink[] }) {
     };
 
     return (
-        <div className='flex items-center gap-3 text-xs lg:mr-15 xl:-ml-4'>
+        <div className='flex items-center gap-3 overflow-hidden text-xs lg:mr-15 xl:-ml-4'>
             {navLinks.map((link) => (
                 <Link
                     key={link.name}

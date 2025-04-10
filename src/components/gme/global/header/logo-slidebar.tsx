@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function LogoWithSidebarToggle({ toggleSidebar }: { toggleSidebar: () => void }) {
     return (
-        <div className='ml-4 flex min-w-[160px] items-center gap-4 lg:ml-20'>
+        <div className='ml-4 flex min-w-[160px] items-center gap-4 overflow-hidden lg:ml-20'>
             <Link href='/'>
                 <img
                     src='https://www.gmesupply.com/images/logos/gme-supply-white-alt.png'

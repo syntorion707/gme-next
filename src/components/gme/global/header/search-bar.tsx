@@ -8,7 +8,10 @@ export default function SearchBar({ variant = DESKTOP }: SearchVariant) {
     const isMobile = variant === MOBILE;
 
     return (
-        <div className={isMobile ? 'bg-black px-4 py-2 lg:hidden' : 'hidden w-full justify-center lg:flex'}>
+        <div
+            className={
+                isMobile ? 'bg-black px-4 py-2 lg:hidden' : 'hidden w-full justify-center overflow-hidden lg:flex'
+            }>
             <div className='flex w-full justify-center'>
                 {isMobile ? (
                     <div className='relative w-full'>

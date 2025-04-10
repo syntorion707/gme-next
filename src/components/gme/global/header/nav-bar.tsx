@@ -13,7 +13,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className='w-full border-t-2 border-red-700 bg-black'>
+        <nav className='w-full overflow-hidden border-t-2 border-red-700 bg-black'>
             <div className='mr-20 ml-20'>
                 <ul className='hidden min-w-0 flex-1 items-center justify-between overflow-x-auto px-6 py-2 md:flex'>
                     {menuItems.map((item, index) => (
