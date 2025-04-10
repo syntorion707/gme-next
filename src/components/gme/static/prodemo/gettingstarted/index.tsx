@@ -47,32 +47,49 @@ const GettingStarted = () => {
             </section>
 
             {/* CARD SECTION */}
-            <div className='grid grid-cols-1 gap-6 bg-white p-20 md:grid-cols-2 lg:grid-cols-4'>
+            <div className='grid grid-cols-1 gap-6 bg-white px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 lg:grid-cols-4 lg:px-25 lg:py-15'>
                 {cardData.map((card, index) => (
                     <div
                         key={index}
-                        className='flex flex-col rounded-md bg-white shadow-md transition duration-300 hover:shadow-lg'>
-                        <div className='rounded-t-md bg-red-700 p-4 text-base leading-snug font-bold text-white'>
+                        className='flex h-full flex-col rounded-md bg-white shadow-md transition duration-300 hover:shadow-lg'>
+                        {/* Title Section */}
+                        <div className='text-md h-[72px] rounded-t-md bg-red-700 p-4 leading-snug font-bold text-white'>
                             {card.title}
                         </div>
-                        <div className='flex-1 p-4 text-sm'>
-                            <div className='mb-3 flex items-center gap-2 border-b border-gray-300 pb-2 font-semibold'>
+
+                        {/* Card Content Section */}
+                        <div className='flex flex-1 flex-col'>
+                            {/* Duration Row */}
+                            <div className='text-md flex h-[50px] items-center bg-white px-4 font-bold'>
                                 {card.duration}
                             </div>
-                            <ul className='list-disc space-y-2 pl-5 text-gray-800'>
-                                {card.points.map((point, i) => (
-                                    <li key={i}>{point}</li>
-                                ))}
-                            </ul>
+
+                            {/* Description Content */}
+                            <div className='text-md flex-1 bg-gray-200 px-4 py-4 font-bold text-black'>
+                                <ul className='list-outside list-disc space-y-2 pl-5'>
+                                    {card.points.map((point, idx) => (
+                                        <li key={idx}>{point}</li>
+                                    ))}
+                                </ul>
+
+                                {/* Card Button Section */}
+                                {card.button && (
+                                    <div className='flex flex-col items-center px-4 py-4 sm:flex-row sm:items-center sm:justify-start sm:px-6 md:px-8 lg:px-12'>
+                                        <button className='w-full cursor-pointer rounded bg-red-600 px-6 py-2 font-semibold text-white shadow sm:w-48'>
+                                            Schedule a Demo
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 ))}
             </div>
 
             {/* BUTTON SECTION */}
-            <div className='flex w-full justify-end gap-4 p-4 pr-20 sm:flex-row sm:items-center'>
+            <div className='flex w-full flex-col items-center justify-end gap-4 p-4 sm:flex-row sm:items-center sm:justify-end sm:px-6 md:px-10 lg:pr-20'>
                 <button
-                    className='w-full cursor-pointer rounded bg-gray-200 px-6 py-1 font-semibold text-red-600 shadow sm:w-48'
+                    className='w-full cursor-pointer rounded bg-gray-200 px-6 py-2 font-semibold text-red-600 shadow sm:w-48'
                     onClick={() => setShowVideoModel(true)}>
                     Watch Video
                 </button>
