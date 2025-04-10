@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { ProductType } from '@/types/product';
 import QuickShipInfo from './quick-ship-info';
 import Ratings from './ratings';
 

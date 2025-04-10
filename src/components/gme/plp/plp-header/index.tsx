@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { electricianProducts } from '../dummy-data/data';
+import { useProducts } from '@/hooks/features/useProducts';
 import ItemsPerPage from './items-per-page';
 import Pagination from './pagination';
 import QuickShipSwitch from './quick-ship-switch';
@@ -20,7 +20,8 @@ interface Props {
 }
 
 const PLPHeader = (props: Props) => {
-    const totalCount = electricianProducts.length;
+    const { products } = useProducts();
+    const totalCount = products?.length;
     const totalPages = Math.ceil(totalCount / props.itemsPerPage || 5);
 
     const handlePageChange = (page: number) => {

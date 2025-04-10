@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { electricianProducts } from '../dummy-data/data';
+import { useProducts } from '@/hooks/features/useProducts';
 import PLPHeader from '../plp-header';
 import Gridview from './grid-view';
 import ListView from './list-view';
@@ -12,6 +12,8 @@ type Props = {
 };
 
 const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
+    const { products } = useProducts();
+    console.log('Fetched data from useProducts:', products);
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(5);
     const [currentView, setCurrentView] = useState<'grid' | 'list'>('grid');
@@ -36,7 +38,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
         setCurrentView(view);
     };
 
-    const sortedProducts = [...electricianProducts].sort((a, b) => {
+    const sortedProducts = [...(products ?? [])].sort((a, b) => {
         if (sortOption === 'price-low-high') {
             return a.price - b.price;
         } else if (sortOption === 'price-high-low') {
@@ -46,7 +48,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
         return 0;
     });
 
-    const paginatedProducts = sortedProducts.slice(startIndex, endIndex);
+    const paginatedProducts = sortedProducts?.slice(startIndex, endIndex);
 
     return (
         <div className='w-full'>
@@ -62,7 +64,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
             />
             {currentView === 'grid' ? (
                 <div className='mt-2 grid grid-cols-1 gap-8 p-4 md:grid-cols-2 md:p-6 lg:min-w-3/4 lg:grid-cols-2 xl:grid-cols-4 xl:gap-4'>
-                    {paginatedProducts.map((product) => (
+                    {paginatedProducts?.map((product) => (
                         <Link href='/pdp' key={product.id}>
                             <Gridview key={product.id} product={product} />
                         </Link>
@@ -70,7 +72,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
                 </div>
             ) : (
                 <div className='grid w-full grid-cols-1 gap-4 p-2'>
-                    {paginatedProducts.map((product) => (
+                    {paginatedProducts?.map((product) => (
                         <Link href='/pdp' key={product.id}>
                             <ListView key={product.id} product={product} />
                         </Link>
