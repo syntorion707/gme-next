@@ -19,7 +19,7 @@ const ItemsPerPage = (props: Props) => {
                 id='page'
                 value={props.itemsPerPage || INITIAL_ITEMS_PER_PAGE}
                 onChange={handleItemsPerPageChange}
-                className='cursor-pointer rounded border border-gray-300 p-2 text-center'>
+                className='border-my-border-grey cursor-pointer rounded border p-2 text-center'>
                 {ITEMS_PER_PAGE_OPTIONs.map((option) => (
                     <option key={option} value={option}>
                         {option} items per page

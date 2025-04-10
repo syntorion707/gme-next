@@ -1,14 +1,14 @@
 'use client';
 
 import React from 'react';
-import { MAX_VISIBLE_PAGES, PaginationVariant, VARIANT_DEFAULT, VARIANT_MOBILE } from '@/helpers/constants';
+import { MAX_VISIBLE_PAGES, VARIANT_DEFAULT, VARIANT_MOBILE } from '@/helpers/constants';
 
 interface PaginationProps {
     currentPage: number;
     totalPages: number;
     onPageChange: (page: number) => void;
     className?: string;
-    variant?: PaginationVariant;
+    variant?: string;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
@@ -73,7 +73,7 @@ const Pagination: React.FC<PaginationProps> = ({
                         key={index}
                         onClick={() => (typeof page === 'number' ? handlePageChange(page) : null)}
                         disabled={page === '...'}
-                        className={` ${variant === VARIANT_DEFAULT ? 'h-6 w-5 rounded text-xs font-bold' : 'h-5 w-5 text-xs font-bold'} ${page === currentPage ? 'text-red-500' : variant === 'default' ? 'text-black hover:bg-gray-300' : 'text-gray-700'} ${page === '...' ? 'cursor-default' : 'cursor-pointer'} `}>
+                        className={` ${variant === VARIANT_DEFAULT ? 'h-6 w-5 rounded text-xs font-bold' : 'h-5 w-5 text-xs font-bold'} ${page === currentPage ? 'text-primary' : variant === 'default' ? 'hover:bg-secondary text-black' : 'text-secondary'} ${page === '...' ? 'cursor-default' : 'cursor-pointer'} `}>
                         {page}
                     </button>
                 ))}

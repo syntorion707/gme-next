@@ -20,10 +20,10 @@ const Ratings: React.FC<ratingsProps> = ({ product }) => {
                         fill='currentColor'
                         className={`bi bi-star-fill ${
                             starValue <= rating
-                                ? 'text-red-700'
+                                ? 'text-primary'
                                 : starValue - 0.5 <= rating
-                                  ? 'text-red-700'
-                                  : 'text-gray-300'
+                                  ? 'text-primary'
+                                  : 'text-secondary'
                         }`}
                         viewBox='0 0 16 16'>
                         {starValue - 0.5 <= rating && starValue > rating ? (
@@ -34,7 +34,7 @@ const Ratings: React.FC<ratingsProps> = ({ product }) => {
                     </svg>
                 );
             })}
-            <p className='text-xs text-gray-600'>(5)</p>
+            <p className='text-secondary text-xs'>(5)</p>
         </div>
     );
 };

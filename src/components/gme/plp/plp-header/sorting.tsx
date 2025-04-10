@@ -17,7 +17,7 @@ const Sorting: React.FC<sortingProps> = ({ sortOption, onSortChange }) => {
             <select
                 name='sort'
                 id=''
-                className='w-fit cursor-pointer rounded border border-gray-300 p-2 text-start md:w-fit'
+                className='border-my-border-grey w-fit cursor-pointer rounded border p-2 text-start md:w-fit'
                 value={sortOption}
                 onChange={handleSortChange}>
                 {SORT_OPTIONS.map(({ value, label }) => (

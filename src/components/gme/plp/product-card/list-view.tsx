@@ -9,7 +9,7 @@ interface ProductCardProps {
 
 const ListView: FC<ProductCardProps> = ({ product }) => {
     return (
-        <div className='relative mt-8 flex w-full border border-gray-300 p-2'>
+        <div className='border-my-border-grey relative mt-8 flex w-full border p-2'>
             <div className='absolute top-0 left-0 w-32 bg-black md:right-0'>
                 <p className='p-1 text-end text-xs font-bold text-white'>MULTIPLE OPTIONS</p>
             </div>
@@ -34,11 +34,11 @@ const ListView: FC<ProductCardProps> = ({ product }) => {
                     <QuickShipInfo product={product} />
                     <div className='flex flex-col items-center justify-center xl:justify-self-end'>
                         {product.isBackOrder ? (
-                            <button className='h-8 w-60 cursor-pointer rounded-2xl bg-gray-400 text-xs font-bold text-white hover:bg-black md:h-11 md:w-120 md:rounded-3xl lg:h-10 lg:w-98 xl:w-50'>
+                            <button className='bg-secondary h-8 w-60 cursor-pointer rounded-2xl text-xs font-bold text-white hover:bg-black md:h-11 md:w-120 md:rounded-3xl lg:h-10 lg:w-98 xl:w-50'>
                                 BACKORDER
                             </button>
                         ) : (
-                            <button className='h-8 w-60 cursor-pointer rounded-2xl bg-red-600 text-xs font-bold text-white hover:bg-black md:h-11 md:w-120 md:rounded-3xl lg:h-10 lg:w-98 xl:w-50'>
+                            <button className='bg-primary h-8 w-60 cursor-pointer rounded-2xl text-xs font-bold text-white hover:bg-black md:h-11 md:w-120 md:rounded-3xl lg:h-10 lg:w-98 xl:w-50'>
                                 CUSTOMIZE SELECTION
                             </button>
                         )}
