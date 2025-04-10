@@ -14,8 +14,8 @@ export async function GET(request: Request) {
 
         case 'getProducts':
             await new Promise((resolve) => setTimeout(resolve, 3000));
-            
-return NextResponse.json(productJson);
+
+            return NextResponse.json(productJson);
 
         default:
             return NextResponse.json({ error: 'invalid Request', status: 400 });

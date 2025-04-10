@@ -57,7 +57,6 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
                 currentView={currentView}
                 onPageChange={handlePageChange}
                 itemsPerPage={itemsPerPage}
-                onViewChange={handleViewChange}
                 onSortChange={handleSortChange}
                 onMobileFilterToggle={onMobileFilterToggle}
                 sortOption={sortOption}
@@ -84,7 +83,6 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
                 currentView={currentView}
                 onPageChange={handlePageChange}
                 itemsPerPage={itemsPerPage}
-                onViewChange={handleViewChange}
                 onSortChange={handleSortChange}
                 onMobileFilterToggle={onMobileFilterToggle}
                 sortOption={sortOption}
