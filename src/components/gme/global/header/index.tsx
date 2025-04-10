@@ -15,6 +15,19 @@ const navLinks = [
     { name: 'Cart', href: '/cart', icon: 'https://www.gmesupply.com/Content/Images/cart.svg' }
 ];
 
+const categoryLinks = [
+    { name: 'Featured Brands' },
+    { name: 'Fall Protection' },
+    { name: 'PPE & Work Wear' },
+    { name: 'Lifting & Rigging' },
+    { name: 'Rope' },
+    { name: 'Rescue' },
+    { name: 'First Aid' },
+    { name: 'Tools' },
+    { name: 'Bags, Buckets, & Storage' },
+    { name: 'Devices & Testing' }
+];
+
 export default function Header() {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
     const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);

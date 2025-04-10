@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import QuantityButton from './quantityButton';
+import QuantityButton from './quantity-button';
 
 const DropdownForProduct = () => {
     const product = {

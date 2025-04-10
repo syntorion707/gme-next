@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useSort } from '../../../../hooks/useSort';
 import EntriesPerPage from '../per-page-entry';
-import { getSortIndicator } from '../sortIndicator';
+import { getSortIndicator } from '../sort-indicator';
 
 const ShippingAddress = () => {
     const { sortConfig, requestSort } = useSort();
