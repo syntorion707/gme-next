@@ -1,7 +1,7 @@
 import React from 'react';
 import ShopAllBrands from '@/components/categories-page/shop-all-brands';
 
-const allBrands = () => {
+const AllBrands = () => {
     return (
         <div>
             <ShopAllBrands />
@@ -9,4 +9,4 @@ const allBrands = () => {
     );
 };
 
-export default allBrands;
+export default AllBrands;
