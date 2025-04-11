@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { INITIAL_ITEMS_PER_PAGE, INITIAL_SORT_OPTION, VIEW_GRID } from '@/helpers/constants';
 import { electricianProducts } from '../dummy-data/data';
 import PLPHeader from '../plp-header';
 import Gridview from './grid-view';
@@ -13,9 +14,10 @@ type Props = {
 
 const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(5);
-    const [currentView, setCurrentView] = useState<'grid' | 'list'>('grid');
-    const [sortOption, setSortOption] = useState('relevance');
+    const [itemsPerPage, setItemsPerPage] = useState(INITIAL_ITEMS_PER_PAGE);
+    const [currentView, setCurrentView] = useState<string>(VIEW_GRID);
+    const [sortOption, setSortOption] = useState(INITIAL_SORT_OPTION);
+    const [quickShipEnabled, setQuickShipEnabled] = useState(false);
 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -32,8 +34,13 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
         setCurrentPage(1);
     };
 
-    const handleViewChange = (view: 'grid' | 'list') => {
+    const handleViewChange = (view: string) => {
         setCurrentView(view);
+    };
+
+    const handleQuickShipChange = () => {
+        setQuickShipEnabled(!quickShipEnabled);
+        setCurrentPage(1);
     };
 
     const sortedProducts = [...electricianProducts].sort((a, b) => {
@@ -59,6 +66,8 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
                 onSortChange={handleSortChange}
                 onMobileFilterToggle={onMobileFilterToggle}
                 sortOption={sortOption}
+                quickShipEnabled={quickShipEnabled}
+                onQuickShipToggle={handleQuickShipChange}
             />
             {currentView === 'grid' ? (
                 <div className='mt-2 grid grid-cols-1 gap-8 p-4 md:grid-cols-2 md:p-6 lg:min-w-3/4 lg:grid-cols-2 xl:grid-cols-4 xl:gap-4'>
@@ -86,6 +95,8 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
                 onSortChange={handleSortChange}
                 onMobileFilterToggle={onMobileFilterToggle}
                 sortOption={sortOption}
+                quickShipEnabled={quickShipEnabled}
+                onQuickShipToggle={handleQuickShipChange}
             />
         </div>
     );

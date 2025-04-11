@@ -6,7 +6,7 @@ const footerConfig = {
 
 const CopyRight = () => {
     return (
-        <footer className='flex items-center justify-center bg-gray-700 p-6 text-gray-200'>
+        <footer className='flex items-center justify-center bg-gray-700 p-4 text-gray-200'>
             <p className='text-md text-center'>{footerConfig.copyright}</p>
         </footer>
     );

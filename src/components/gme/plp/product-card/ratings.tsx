@@ -1,10 +1,14 @@
 import React from 'react';
 
-const Ratings = () => {
+interface ratingsProps {
+    product: ProductType;
+}
+
+const Ratings: React.FC<ratingsProps> = ({ product }) => {
     return (
         <div className='flex items-center gap-1'>
             {[...Array(5)].map((_, i) => {
-                const rating = 2.5;
+                const rating = product.rating || 0;
                 const starValue = i + 1;
 
                 return (
@@ -16,10 +20,10 @@ const Ratings = () => {
                         fill='currentColor'
                         className={`bi bi-star-fill ${
                             starValue <= rating
-                                ? 'text-red-700'
+                                ? 'text-primary'
                                 : starValue - 0.5 <= rating
-                                  ? 'text-red-700'
-                                  : 'text-gray-300'
+                                  ? 'text-primary'
+                                  : 'text-secondary'
                         }`}
                         viewBox='0 0 16 16'>
                         {starValue - 0.5 <= rating && starValue > rating ? (
@@ -30,7 +34,7 @@ const Ratings = () => {
                     </svg>
                 );
             })}
-            <p className='text-xs text-gray-600'>(5)</p>
+            <p className='text-secondary text-xs'>(5)</p>
         </div>
     );
 };

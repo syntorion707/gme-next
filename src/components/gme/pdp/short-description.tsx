@@ -16,7 +16,7 @@ const ShortDescription: React.FC<ShortDescriptionProps> = ({ handleViewMoreClick
                     <li>Suitable for indoor and outdoor applications</li>
                     <li>Made of copper for good conductivity and tin plating for corrosion resistance</li>
                 </div>
-                <p className='md:text-md cursor-pointer text-sm text-red-500' onClick={handleViewMoreClick}>
+                <p className='md:text-md text-primary cursor-pointer text-sm' onClick={handleViewMoreClick}>
                     View More
                 </p>
             </div>

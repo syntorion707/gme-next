@@ -1,13 +1,14 @@
 'use client';
 
 import React from 'react';
+import { MAX_VISIBLE_PAGES, VARIANT_DEFAULT, VARIANT_MOBILE } from '@/helpers/constants';
 
 interface PaginationProps {
     currentPage: number;
     totalPages: number;
     onPageChange: (page: number) => void;
     className?: string;
-    variant?: 'default' | 'mobile';
+    variant?: string;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
@@ -15,13 +16,12 @@ const Pagination: React.FC<PaginationProps> = ({
     totalPages,
     onPageChange,
     className = '',
-    variant = 'default'
+    variant = VARIANT_DEFAULT
 }) => {
     const getPageNumbers = () => {
         const pages = [];
-        const maxVisiblePages = 5;
 
-        if (totalPages <= maxVisiblePages) {
+        if (totalPages <= MAX_VISIBLE_PAGES) {
             for (let i = 1; i <= totalPages; i++) {
                 pages.push(i);
             }
@@ -67,13 +67,13 @@ const Pagination: React.FC<PaginationProps> = ({
                 </svg>
             </button>
 
-            <div className={`flex ${variant === 'mobile' ? 'gap-4 p-2' : 'gap-5'}`}>
+            <div className={`flex ${variant === VARIANT_MOBILE ? 'gap-4 p-2' : 'gap-5'}`}>
                 {getPageNumbers().map((page, index) => (
                     <button
                         key={index}
                         onClick={() => (typeof page === 'number' ? handlePageChange(page) : null)}
                         disabled={page === '...'}
-                        className={` ${variant === 'default' ? 'h-6 w-5 rounded text-xs font-bold' : 'h-5 w-5 text-xs font-bold'} ${page === currentPage ? 'text-red-500' : variant === 'default' ? 'text-black hover:bg-gray-300' : 'text-gray-700'} ${page === '...' ? 'cursor-default' : 'cursor-pointer'} `}>
+                        className={` ${variant === VARIANT_DEFAULT ? 'h-6 w-5 rounded text-xs font-bold' : 'h-5 w-5 text-xs font-bold'} ${page === currentPage ? 'text-primary' : variant === 'default' ? 'hover:bg-secondary text-black' : 'text-secondary'} ${page === '...' ? 'cursor-default' : 'cursor-pointer'} `}>
                         {page}
                     </button>
                 ))}
