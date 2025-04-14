@@ -16,8 +16,8 @@ interface KnowledgeBaseProps {
 export const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ items, link }) => {
     return (
         <div className='mt-10 flex flex-col items-center bg-[#ECECEC] px-4 py-8 md:px-8'>
-            <span className='mb-4 w-full border-b-2 border-[#ce181e] p-2 text-center text-lg font-bold uppercase md:mb-8 md:text-3xl'>
-                <span className='text-[#ce181e]'>Knowledge</span> <span className='text-black'>Base</span>
+            <span className='border-primary mb-4 w-full border-b-2 p-2 text-center text-lg font-bold uppercase md:mb-8 md:text-3xl'>
+                <span className='text-primary'>Knowledge</span> <span className='text-black'>Base</span>
             </span>
 
             <div className='w-full'>
@@ -43,7 +43,7 @@ export const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ items, link }) => 
                             <div className='flex flex-grow flex-col p-6'>
                                 <h3 className='mb-3 text-center text-lg font-semibold text-gray-800'>{item.title}</h3>
                                 <Link href={link} passHref>
-                                    <button className='text-md mx-auto mt-auto h-[40px] w-full border-2 border-[#ce181e] px-4 py-1 font-medium text-[#ce181e] transition-all duration-300 hover:bg-[#ce181e] hover:text-white sm:w-full'>
+                                    <button className='text-md border-primary text-primary hover:bg-primary mx-auto mt-auto h-[40px] w-full border-2 px-4 py-1 font-medium transition-all duration-300 hover:text-white sm:w-full'>
                                         Learn More
                                     </button>
                                 </Link>
@@ -55,7 +55,7 @@ export const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ items, link }) => 
                 {/* Knowledge Base Button */}
                 <div className='mt-8 text-center'>
                     <Link href={link} passHref>
-                        <button className='bg-[#ce181e] px-4 py-1 text-lg font-semibold text-white shadow-md transition-all duration-300'>
+                        <button className='bg-primary px-4 py-1 text-lg font-semibold text-white shadow-md transition-all duration-300'>
                             Visit Knowledge Base
                         </button>
                     </Link>
