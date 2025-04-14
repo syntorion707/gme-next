@@ -54,8 +54,8 @@ export const NewProducts: React.FC<NewProductsProps> = ({ products }) => {
         };
         handleResize();
         window.addEventListener('resize', handleResize);
-        
-return () => window.removeEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const maxIndex = Math.max(products.length - slidesToShow, 0);
@@ -83,8 +83,8 @@ return () => window.removeEventListener('resize', handleResize);
             className='mt-6 flex flex-col items-center bg-[#ECECEC] py-8'
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}>
-            <span className='w-full border-b-2 border-[#ce181e] p-2 text-center text-2xl font-bold uppercase md:mb-8 md:text-3xl'>
-                What's <span className='text-[#ce181e]'>New</span>
+            <span className='border-primary w-full border-b-2 p-2 text-center text-2xl font-bold uppercase md:mb-8 md:text-3xl'>
+                What's <span className='text-primary'>New</span>
             </span>
 
             {/* External Nav Buttons - only visible on desktop */}
@@ -120,7 +120,7 @@ return () => window.removeEventListener('resize', handleResize);
                                 key={index}
                                 className='relative h-[520px] min-w-0 flex-shrink-0 grow basis-0 bg-white shadow-md transition-all duration-300 ease-in-out hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]'
                                 style={{ width: `${100 / slidesToShow}%` }}>
-                                <div className='absolute top-0 left-0 bg-[#ce181e] px-3 py-1 text-sm font-bold text-white'>
+                                <div className='bg-primary absolute top-0 left-0 px-3 py-1 text-sm font-bold text-white'>
                                     NEW!
                                 </div>
                                 <div className='relative mt-5 h-48'>
@@ -184,7 +184,7 @@ return () => window.removeEventListener('resize', handleResize);
 
                                         <button
                                             className={`w-full px-4 py-2 text-white transition-colors ${
-                                                product.status === 'ON BACKORDER' ? 'bg-[#6c757d]' : 'bg-[#ce181e]'
+                                                product.status === 'ON BACKORDER' ? 'bg-[#6c757d]' : 'bg-primary'
                                             }`}>
                                             {product.status === 'ON BACKORDER'
                                                 ? 'SELECT FOR BACKORDER'
@@ -195,7 +195,7 @@ return () => window.removeEventListener('resize', handleResize);
                                         {product.shipping && (
                                             <div className='shipping-promo flex items-center justify-center'>
                                                 <span className='text-sm font-bold text-black'>This item ships </span>
-                                                <span className='ml-1 text-sm font-bold text-[#ce181e]'>FREE</span>
+                                                <span className='text-primary ml-1 text-sm font-bold'>FREE</span>
                                             </div>
                                         )}
                                         {product.code && (
