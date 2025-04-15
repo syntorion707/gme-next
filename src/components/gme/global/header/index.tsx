@@ -22,7 +22,7 @@ export default function Header() {
 
     return (
         <div className='top-0 z-50 md:sticky'>
-            <nav className='flex items-center justify-between bg-black px-4 py-3 text-white md:px-6'>
+            <nav className='flex items-center justify-between bg-black px-4 py-3 text-white'>
                 <LogoWithSidebarToggle toggleSidebar={toggleSidebar} />
                 <SearchBar />
                 <div className='mr-7 flex shrink-0 items-center gap-4'>
