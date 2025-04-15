@@ -38,7 +38,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
         setCurrentView(view);
     };
 
-    const sortedProducts = [...(products ?? [])].sort((a, b) => {
+    const sortedProducts = [...(products?.length > 0 ? products : [])].sort((a, b) => {
         if (sortOption === 'price-low-high') {
             return a.price - b.price;
         } else if (sortOption === 'price-high-low') {

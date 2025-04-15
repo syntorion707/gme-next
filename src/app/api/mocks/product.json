@@ -4,37 +4,37 @@
     "productPrice": "$148.99 to $699.99",
     "productImages": [
         "https://www.gmesupply.com/media/catalog/product/g/m/gm-90030%20(63).png",
-        "https://www.gmesupply.com/media/catalog/product/g/m/gm-90030%20(62).png"
+        "https://www.gmesupply.com/media/catalog/product/g/m/gm-90030%20(62).png",
+        "https://www.gmesupply.com/c/1024//media/catalog/product/s/t/sterling-ancore-sling-1.jpg",
+        "https://www.gmesupply.com/c/1024//media/catalog/product/s/t/sterling-ancore-sling-2.jpg",
+        "https://www.gmesupply.com/c/1024//media/catalog/product/s/t/sterling-ancore-sling-3.jpg"
     ],
     "productRating": 4,
     "logo": "https://www.gmesupply.com/media/catalog/product/3/m/3M-Logo.jpg",
     "model": "C-3M-31130",
-    "stock": {
-        "in_stock": true,
-        "stock_quantity": 100
-    },
+    "stock": "C-3M-31130",
     "wireGauge": [
-        "1000 KCMIL",
-        "2/0 AWG",
-        "250 kcmil",
-        "3/0 AWG",
-        "300 kcmil",
-        "350 kcmil",
-        "4/0 AWG",
-        "500 kcmil",
-        "600 kcmil",
-        "750 kcmil"
+        { "value": "1000 KCMIL" },
+        { "value": "2/0 AWG" },
+        { "value": "250 kcmil" },
+        { "value": "3/0 AWG" },
+        { "value": "300 kcmil" },
+        { "value": "350 kcmil" },
+        { "value": "4/0 AWG" },
+        { "value": "500 kcmil" },
+        { "value": "600 kcmil" },
+        { "value": "750 kcmil" }
     ],
-    "length": "1/2\"",
+    "length": "1/2 in",
     "specs": {
         "product_code": "C-3M-31130",
         "manufacturer": "3M",
         "sku": "3M-7000005882",
         "dimensions": {
-            "width": "1.5\"",
+            "width": "500 kcmil",
             "length": "1/2\""
         },
-        "weight": "50 g",
+        "weight": 50,
         "additional_skus": ["3M-7000031406", "3M-7000031407", "3M-7000031408", "3M-7000031409"]
     }
 }

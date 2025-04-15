@@ -257,7 +257,8 @@ const CategoryPage = () => {
                                             </div>
 
                                             <Link
-                                                href={fullPath}
+                                                // href={fullPath}
+                                                href='/plp'
                                                 className='flex h-full w-full flex-col items-center text-center transition hover:shadow-lg hover:shadow-black md:h-[75%]'>
                                                 <div className=''>
                                                     <Image
