@@ -7,7 +7,7 @@ export const FooterNavigationWrapper: React.FC = () => {
             title: 'INFORMATION',
             links: [
                 { name: 'Careers', href: '#' },
-                { name: 'Financing', href: '#' },
+                { name: 'Financing', href: '/financing' },
                 { name: 'Shipping & Returns', href: '#' },
                 { name: 'Privacy Policy', href: '#' },
                 { name: 'Terms & Conditions', href: '#' },
