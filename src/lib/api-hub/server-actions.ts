@@ -16,7 +16,7 @@ export const getProducts = async () => {
 };
 
 export const getCategory = async () => {
-    const category = await serverFetcher('/api?scenario=getcategory');
+    const category = await serverFetcher('/api?scenario=getCategory');
 
     return category as CategoryType[];
 };

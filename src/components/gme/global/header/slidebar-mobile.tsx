@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation';
 import { ReactNode, useEffect, useRef } from 'react';
 import { BsShop } from 'react-icons/bs';
 import { FaShoppingCart, FaStar } from 'react-icons/fa';
-import { FiChevronRight, FiHelpCircle, FiTag } from 'react-icons/fi';
+import { FiHelpCircle, FiTag } from 'react-icons/fi';
 import { MdOutlineMail } from 'react-icons/md';
-import { Featured_Brands, SHOP_ALL_CATEGORY, SHOP_BY_INDUSTRY, SIGN_IN } from '@/utils/constant';
+import { SIGN_IN } from '@/utils/constant';
 
 interface MenuItemProps {
     icon: ReactNode;
@@ -175,7 +175,7 @@ export default function Sidebar({
             <div className='mb-4 ml-5 hidden border-b-1 border-red-600 px-6 sm:block'>
                 <Link href='/'>
                     <div onClick={() => toggleSidebar(true)} className='cursor-pointer'>
-                        <h2 className='pb-2 text-[18px] text-black'>{SHOP_ALL_CATEGORY}</h2>
+                        <h2 className='pb-2 text-[18px] text-black'>Shop All Categories</h2>
                     </div>
                 </Link>
             </div>
@@ -184,7 +184,7 @@ export default function Sidebar({
                     <h2
                         onClick={() => toggleSidebar(true)}
                         className='text-primary flex cursor-pointer items-center justify-between text-[16px] font-bold'>
-                        {Featured_Brands}
+                        Featured Brands
                         <span className='text-[16px] text-black'>&#10140;</span>
                     </h2>
                 </div>
@@ -192,7 +192,7 @@ export default function Sidebar({
                     <h2
                         onClick={() => toggleSidebar(true)}
                         className='flex cursor-pointer items-center justify-between text-[16px] font-semibold text-black'>
-                        {SHOP_BY_INDUSTRY}
+                        Shop By Industry
                         <span className='text-[16px] text-black'>&#10140;</span>
                     </h2>
                 </div>

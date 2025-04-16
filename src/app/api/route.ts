@@ -17,7 +17,8 @@ export async function GET(request: Request) {
             await new Promise((resolve) => setTimeout(resolve, 3000));
 
             return NextResponse.json(productJson);
-        case 'getcategory':
+
+        case 'getCategory':
             await new Promise((resolve) => setTimeout(resolve, 3000));
 
             return NextResponse.json(categoryJson);
