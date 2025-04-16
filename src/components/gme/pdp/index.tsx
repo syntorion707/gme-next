@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
+import { useProduct } from '@/hooks/features/useProducts';
 import { useScrollTrigger } from '@/hooks/useScrollTrigger';
 import ProductDescription from './description';
 import DropdownForProduct from './dropdown';
 import ImageSlider from './image-slider';
 import ProductDetails from './product-details';
+import ProductDetailsDropdown from './product-details-dropdown';
 import QuantityButton from './quantity-button';
 import ReviewSection from './review-section';
 import ShortDescription from './short-description';
@@ -13,47 +15,7 @@ import Specs from './specs';
 import WireGauge from './wire-gauge';
 
 const ProductDetailsPage = () => {
-    const product = {
-        productName: '3M Scotchlok Copper Two Hole Long Barrel Lug',
-        productDescription:
-            '3M Scotchlok 31100 2 Hole Compression Lug is for use with copper conductors only. The seamless copper construction offers high conductivity and a tin plated finish resists corrosion. It is rated for 35 kV voltage applications. Long barrel ensures a secure fit and offers reliable performance. Barrel has colored stripes that help to indicate the wire range. Suitable for indoor and outdoor applications. Made of copper for good conductivity and tin plating for corrosion resistance. For up to 35 kV applications. UL Listed, CSA Certified and RoHS 2011/65/EU Compliant',
-        productPrice: '$148.99 to $699.99',
-        productImages: [
-            'https://www.gmesupply.com/media/catalog/product/g/m/gm-90030%20(63).png',
-            'https://www.gmesupply.com/media/catalog/product/g/m/gm-90030%20(62).png',
-            'https://www.gmesupply.com/c/1024//media/catalog/product/s/t/sterling-ancore-sling-1.jpg',
-            'https://www.gmesupply.com/c/1024//media/catalog/product/s/t/sterling-ancore-sling-2.jpg',
-            'https://www.gmesupply.com/c/1024//media/catalog/product/s/t/sterling-ancore-sling-3.jpg'
-        ],
-        productRating: 4,
-        logo: 'https://www.gmesupply.com/media/catalog/product/3/m/3M-Logo.jpg',
-        model: 'C-3M-31130',
-        stock: 'C-3M-31130',
-        wireGauge: [
-            { value: '1000 KCMIL' },
-            { value: '2/0 AWG' },
-            { value: '250 kcmil' },
-            { value: '3/0 AWG' },
-            { value: '300 kcmil' },
-            { value: '350 kcmil' },
-            { value: '4/0 AWG' },
-            { value: '500 kcmil' },
-            { value: '600 kcmil' },
-            { value: '750 kcmil' }
-        ],
-        length: '1/2 in',
-        specs: {
-            product_code: 'C-3M-31130',
-            manufacturer: '3M',
-            sku: '3M-7000005882',
-            dimensions: {
-                width: '500 kcmil',
-                length: '1/2"'
-            },
-            weight: 50,
-            additional_skus: ['3M-7000031406', '3M-7000031407', '3M-7000031408', '3M-7000031409']
-        }
-    };
+    const { product } = useProduct();
 
     const [showDescription, setShowDescription] = useState(true);
 
@@ -95,7 +57,7 @@ const ProductDetailsPage = () => {
 
             <div className='w-full grid-cols-1 p-2 lg:flex lg:grid-cols-2'>
                 {/* Image Slider Section */}
-                <ImageSlider product={product} />
+                {product?.productImages && <ImageSlider product={product} />}
 
                 {/* Product Details Section */}
                 <div className='invisible-scrollbar h-[calc(100vh-100px)] w-full overflow-y-auto p-2'>
@@ -104,6 +66,8 @@ const ProductDetailsPage = () => {
                     <ShortDescription handleViewMoreClick={handleViewMoreClick} />
 
                     <WireGauge product={product} />
+
+                    <ProductDetailsDropdown />
 
                     <QuantityButton />
 

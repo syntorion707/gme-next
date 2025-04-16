@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { VIEW_GRID } from '@/helpers/constants';
 import { useProducts } from '@/hooks/features/useProducts';
 import PLPHeader from '../plp-header';
 import Gridview from './grid-view';
@@ -16,7 +17,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
     console.log('Fetched data from useProducts:', products);
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(5);
-    const [currentView, setCurrentView] = useState<'grid' | 'list'>('grid');
+    const [currentView, setCurrentView] = useState<string>(VIEW_GRID);
     const [sortOption, setSortOption] = useState('relevance');
 
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -34,11 +35,11 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
         setCurrentPage(1);
     };
 
-    const handleViewChange = (view: 'grid' | 'list') => {
+    const handleViewChange = (view: string) => {
         setCurrentView(view);
     };
 
-    const sortedProducts = [...(products ?? [])].sort((a, b) => {
+    const sortedProducts = [...(products?.length > 0 ? products : [])].sort((a, b) => {
         if (sortOption === 'price-low-high') {
             return a.price - b.price;
         } else if (sortOption === 'price-high-low') {
@@ -60,6 +61,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
                 onSortChange={handleSortChange}
                 onMobileFilterToggle={onMobileFilterToggle}
                 sortOption={sortOption}
+                onViewChange={handleViewChange}
             />
             {currentView === 'grid' ? (
                 <div className='mt-2 grid grid-cols-1 gap-8 p-4 md:grid-cols-2 md:p-6 lg:min-w-3/4 lg:grid-cols-2 xl:grid-cols-4 xl:gap-4'>
@@ -86,6 +88,7 @@ const ProductCardNew = ({ onMobileFilterToggle }: Props) => {
                 onSortChange={handleSortChange}
                 onMobileFilterToggle={onMobileFilterToggle}
                 sortOption={sortOption}
+                onViewChange={handleViewChange}
             />
         </div>
     );

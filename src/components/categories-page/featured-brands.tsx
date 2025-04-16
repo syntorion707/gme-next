@@ -87,7 +87,9 @@ const FeaturedBrandsModal: React.FC<BrandsProps> = ({ onClose }) => {
 
                     <div className='mt-4'>
                         <Link href={'/allbrands'}>
-                            <h3 className='text-primary text-md mb-4 cursor-pointer font-semibold md:text-lg'>
+                            <h3
+                                className='text-primary text-md mb-4 cursor-pointer font-semibold md:text-lg'
+                                onClick={onClose}>
                                 Shop All Brands
                             </h3>
                         </Link>
@@ -107,7 +109,9 @@ const FeaturedBrandsModal: React.FC<BrandsProps> = ({ onClose }) => {
 
                         <div className='my-4'>
                             <Link href={'/allbrands'}>
-                                <h3 className='text-primary text-md cursor-pointer text-right font-semibold md:text-lg'>
+                                <h3
+                                    className='text-primary text-md cursor-pointer text-right font-semibold md:text-lg'
+                                    onClick={onClose}>
                                     Shop All Brands
                                 </h3>
                             </Link>

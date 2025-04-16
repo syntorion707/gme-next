@@ -45,8 +45,8 @@ const ShopAllBrands = () => {
             </div>
             <div className='flex gap-2 py-2'>
                 <div className='hidden w-[25%] border border-gray-200 px-4 py-2 text-start lg:block'>
-                    <div className='flex items-center gap-2'>
-                        <h2 className='text-md md:text-md font-bold'>Brands Subcategories</h2>
+                    <div className='flex items-center justify-between gap-2'>
+                        <h2 className='text-md md:text-md hover:text-primary font-bold'>Brands Subcategories</h2>
                         {brands ? (
                             <svg
                                 className='h-6 w-6 cursor-pointer text-black'
@@ -79,8 +79,8 @@ const ShopAllBrands = () => {
                             {allBrands.map((brand, index) => {
                                 const formattedName = brand.name.toLowerCase().replace(/\s+/g, '-');
                                 const fullPath = `${url}/${formattedName}`;
-                                
-return (
+
+                                return (
                                     <Link key={index} href={fullPath}>
                                         <p className='text-md py-2 text-gray-500 lg:text-lg'>{brand.name}</p>
                                     </Link>
@@ -95,8 +95,8 @@ return (
                         {allBrands.map((brand, index) => {
                             const formattedName = brand.name.toLowerCase().replace(/\s+/g, '-');
                             const fullPath = `${url}/${formattedName}`;
-                            
-return (
+
+                            return (
                                 <div
                                     key={index}
                                     className='border border-gray-200 py-2 hover:shadow-lg hover:shadow-black'>
