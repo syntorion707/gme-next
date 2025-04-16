@@ -115,8 +115,8 @@ const BannerSection = ({ imageUrl, title, paragraphs, imageAlt = 'Image', withOv
         : `url('${encodedUrl}')`;
 
     console.log('Image URL:', imageUrl);
-    
-return (
+
+    return (
         <div
             style={{
                 backgroundImage: backgroundImage
@@ -140,8 +140,8 @@ return (
 
 const OurMission = () => {
     const imageUrl = 'https://www.gmesupply.com/images/Web_Pages/About_Us/Word%20Graph.jpg';
-    
-return (
+
+    return (
         <ContentSection
             imageUrl={imageUrl}
             title='Our Mission & Values'
@@ -156,8 +156,8 @@ return (
 
 const FoundingBanner = () => {
     const imageUrl = 'https://www.gmesupply.com/images/Web_Pages/About_Us/Our%20Founding.jpg';
-    
-return (
+
+    return (
         <BannerSection
             imageUrl={imageUrl}
             title='Our Founding'
@@ -273,8 +273,8 @@ const OurHistory = () => {
 
 const Future = () => {
     const ImageUrl = 'https://www.gmesupply.com/images/Web_Pages/About_Us/Staff-10_12_01_17.jpg';
-    
-return (
+
+    return (
         <BannerSection
             imageUrl={ImageUrl}
             title='The Future'
@@ -289,8 +289,8 @@ return (
 
 const GearExperts = () => {
     const imageUrl = 'https://www.gmesupply.com/images/Web_Pages/About_Us/Climb%20Higher.jpg';
-    
-return (
+
+    return (
         <ContentSection
             imageUrl={imageUrl}
             title='Gear Experts®'
@@ -312,8 +312,8 @@ const ProudMembers = () => {
         { name: 'SEAA', src: 'https://www.gmesupply.com/images/Web_Pages/About_Us/SEAA_Logo.png' },
         { name: 'ANSI', src: 'https://www.gmesupply.com/images/Web_Pages/About_Us/ANSI_Logo.png' }
     ];
-    
-return (
+
+    return (
         <div className='-mr-4 -ml-4 flex flex-wrap'>
             <div className='w-full max-w-full pr-4 pl-4'>
                 <h4 className='mb-12 text-center text-2xl font-bold'>Proud Members of</h4>

@@ -79,8 +79,8 @@ const ShopAllBrands = () => {
                             {allBrands.map((brand, index) => {
                                 const formattedName = brand.name.toLowerCase().replace(/\s+/g, '-');
                                 const fullPath = `${url}/${formattedName}`;
-                                
-return (
+
+                                return (
                                     <Link key={index} href={fullPath}>
                                         <p className='text-md py-2 text-gray-500 lg:text-lg'>{brand.name}</p>
                                     </Link>

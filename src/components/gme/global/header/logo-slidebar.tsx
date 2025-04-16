@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SHOP_ALL } from '@/utils/constant';
 
 export default function LogoWithSidebarToggle({ toggleSidebar }: { toggleSidebar: () => void }) {
     return (
@@ -7,10 +8,11 @@ export default function LogoWithSidebarToggle({ toggleSidebar }: { toggleSidebar
                 <img
                     src='https://www.gmesupply.com/images/logos/gme-supply-white-alt.png'
                     alt='GME Supply Logo'
-                    className='h-[60px] w-[160px] cursor-pointer object-contain sm:h-[30px] sm:w-[120px] md:h-[30px] md:w-[120px] lg:h-[15px] lg:w-[54px] xl:h-[25px] xl:w-[100px] 2xl:h-[60px] 2xl:w-[250px]'
+                    className='cursor-pointer object-contain min-[320px]:h-[29px] min-[320px]:w-[118px] min-[375px]:h-[29px] min-[375px]:w-[118px] min-[425px]:h-[29px] min-[425px]:w-[118px] min-[768px]:h-[29px] min-[768px]:w-[118px] min-[1024px]:h-[24px] min-[1024px]:w-[54px] min-[1440px]:h-[24px] min-[1440px]:w-[100px] min-[1920px]:h-[24px] min-[1920px]:w-[250px]'
                 />
             </Link>
-            <div className='ml-3 flex flex-col items-start space-y-2 md:ml-4'>
+
+            <div className='flex flex-col items-start gap-10 space-y-2'>
                 <button
                     className='flex flex-col items-center text-white focus:outline-none'
                     role='link'
@@ -24,7 +26,7 @@ export default function LogoWithSidebarToggle({ toggleSidebar }: { toggleSidebar
                     }}>
                     <i className='fas fa-bars text-[22px] md:text-[25px]' />
                     <span className='hidden text-sm font-bold tracking-wider whitespace-nowrap md:inline'>
-                        Shop All
+                        {SHOP_ALL}
                     </span>
                 </button>
             </div>
