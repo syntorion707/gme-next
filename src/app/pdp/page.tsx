@@ -1,6 +1,6 @@
 import ProductDetailsPage from '@/components/gme/pdp';
 
-const pdp = () => {
+const Pdp = () => {
     return (
         <div>
             <ProductDetailsPage />
@@ -8,4 +8,4 @@ const pdp = () => {
     );
 };
 
-export default pdp;
+export default Pdp;

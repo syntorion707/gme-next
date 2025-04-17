@@ -3,12 +3,13 @@ import { ProductDetailsTypes } from '@/types/common';
 
 const ProductDetails: React.FC<ProductDetailsTypes> = ({ product }) => {
     const renderStars = () => {
+        const rating = product?.productRating || 0;
         const stars = [];
         for (let i = 0; i < 5; i++) {
             stars.push(
                 <svg
                     key={i}
-                    className={`h-3 w-3 md:h-5 md:w-5 ${i < product.productRating ? 'text-yellow-500' : 'text-gray-300'}`}
+                    className={`h-3 w-3 md:h-5 md:w-5 ${i < rating ? 'text-yellow-500' : 'text-gray-300'}`}
                     viewBox='0 0 24 24'
                     strokeWidth='2'
                     stroke='currentColor'

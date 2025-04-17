@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ProductDetailsTypes } from '@/types/common';
 
 const WireGauge: React.FC<ProductDetailsTypes> = ({ product }) => {
-    const [selectedWireGauge, setSelectedWireGauge] = useState(product.wireGauge[0]);
+    const [selectedWireGauge, setSelectedWireGauge] = useState(product?.wireGauge?.[0] ?? { value: 'N/A' });
 
     return (
         <div>

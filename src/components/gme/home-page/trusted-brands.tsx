@@ -14,8 +14,8 @@ export const TrustedBrands: React.FC<TrustedBrandsProps> = ({ brands }) => {
 
     return (
         <div className='mt-8 flex flex-col items-center bg-white py-4 md:mt-10 md:py-6'>
-            <span className='mb-4 w-full border-b-2 border-[#ce181e] p-2 text-center text-2xl font-bold uppercase md:mb-8 md:text-3xl'>
-                Trusted <span className='text-[#ce181e]'>Brands</span>
+            <span className='border-primary mb-4 w-full border-b-2 p-2 text-center text-2xl font-bold uppercase md:mb-8 md:text-3xl'>
+                Trusted <span className='text-primary'>Brands</span>
             </span>
 
             <div className='w-full'>

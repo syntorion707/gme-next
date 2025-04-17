@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { electricianProducts } from '../dummy-data/data';
+import { INITIAL_SORT_OPTION, VIEW_GRID } from '@/helpers/constants';
+import { useProducts } from '@/hooks/features/useProducts';
 import ItemsPerPage from './items-per-page';
 import Pagination from './pagination';
 import QuickShipSwitch from './quick-ship-switch';
@@ -12,15 +13,16 @@ interface Props {
     currentPage: number;
     itemsPerPage: number;
     onPageChange?: (page: number, itemsPerPage: number) => void;
-    onViewChange?: (view: 'grid' | 'list') => void;
+    onViewChange?: (view: string) => void;
     onSortChange?: (option: string) => void;
     onMobileFilterToggle?: () => void;
-    currentView?: 'grid' | 'list';
+    currentView?: string;
     sortOption?: string;
 }
 
 const PLPHeader = (props: Props) => {
-    const totalCount = electricianProducts.length;
+    const { products } = useProducts();
+    const totalCount = products?.length;
     const totalPages = Math.ceil(totalCount / props.itemsPerPage || 5);
 
     const handlePageChange = (page: number) => {
@@ -32,7 +34,7 @@ const PLPHeader = (props: Props) => {
         props.onPageChange?.(1, itemsPerPage);
     };
 
-    const handleViewChange = (view: 'grid' | 'list') => {
+    const handleViewChange = (view: string) => {
         props.onViewChange?.(view);
     };
 
@@ -76,11 +78,11 @@ const PLPHeader = (props: Props) => {
                     />
                 </div>
                 <div className='order-6 hidden w-full gap-2 md:order-4 md:flex md:w-auto'>
-                    <ViewSelection currentView={props.currentView || 'grid'} onViewChange={handleViewChange} />
+                    <ViewSelection currentView={props.currentView || VIEW_GRID} onViewChange={handleViewChange} />
                 </div>
 
                 <div className='order-7 mt-2 w-full md:order-5 md:mt-0 md:w-auto'>
-                    <Sorting sortOption={props.sortOption || 'relavance'} onSortChange={handleSortChange} />
+                    <Sorting sortOption={props.sortOption || INITIAL_SORT_OPTION} onSortChange={handleSortChange} />
                 </div>
             </div>
             <div className='pagination mt-2 flex justify-center gap-10 lg:gap-5 xl:hidden xl:gap-5'>
