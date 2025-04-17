@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { AnnouncementBar, Footer, Header } from '@/components/gme/global';
 import { BodyContent } from '@/components/layouts';
 import { Providers } from '@/providers';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './globals.css';
 
 export const metadata: Metadata = {
