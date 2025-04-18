@@ -24,6 +24,8 @@ interface Product {
     model: string;
     stock: string;
     wireGauge: Array<{ value: string }>;
+    colors: Array<{ value: string }>;
+    sizes: Array<{ value: string }>;
     length: string;
     specs: ProductSpecs;
 }

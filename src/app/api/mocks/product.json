@@ -25,6 +25,23 @@
         { "value": "600 kcmil" },
         { "value": "750 kcmil" }
     ],
+    "colors": [
+        { "value": "Red" },
+        { "value": "Black" },
+        { "value": "Blue" },
+        { "value": "White" },
+        { "value": "Green" },
+        { "value": "Yellow" },
+        { "value": "Orange" }
+    ],
+    "sizes": [
+        { "value": "XS" },
+        { "value": "S" },
+        { "value": "M" },
+        { "value": "L" },
+        { "value": "XL" },
+        { "value": "Xxl" }
+    ],
     "length": "1/2 in",
     "specs": {
         "product_code": "C-3M-31130",
