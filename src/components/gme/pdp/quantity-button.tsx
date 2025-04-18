@@ -24,7 +24,7 @@ const QuantityButton = () => {
         <div className='flex gap-2 py-2'>
             <div className='border border-black'>
                 <button
-                    className='text-md cursor-pointer border-r border-black p-2 font-bold text-black md:text-lg'
+                    className='text-md cursor-pointer border-r border-black bg-white p-2 font-bold text-black hover:bg-black hover:text-white md:text-lg'
                     onClick={decreaseQuantity}>
                     -
                 </button>
@@ -36,7 +36,7 @@ const QuantityButton = () => {
                     className='text-md w-12 border-none text-center font-bold text-black focus:outline-none md:text-lg'
                 />
                 <button
-                    className='text-md cursor-pointer border-l border-black p-2 font-bold text-black md:text-lg'
+                    className='text-md cursor-pointer border-l border-black bg-white p-2 font-bold text-black hover:bg-black hover:text-white md:text-lg'
                     onClick={increaseQuantity}>
                     +
                 </button>
