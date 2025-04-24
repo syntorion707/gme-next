@@ -1,4 +1,5 @@
 import React from 'react';
+import { ProductType } from '@/types/product';
 
 interface ProductCardProps {
     product: ProductType;

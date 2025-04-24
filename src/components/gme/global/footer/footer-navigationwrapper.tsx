@@ -1,4 +1,5 @@
 import React from 'react';
+import { POWERED_BY } from '@/utils/constant';
 import FooterNavigation from './footer-navigation';
 
 export const FooterNavigationWrapper: React.FC = () => {
@@ -7,7 +8,7 @@ export const FooterNavigationWrapper: React.FC = () => {
             title: 'INFORMATION',
             links: [
                 { name: 'Careers', href: '#' },
-                { name: 'Financing', href: '#' },
+                { name: 'Financing', href: '/financing' },
                 { name: 'Shipping & Returns', href: '#' },
                 { name: 'Privacy Policy', href: '#' },
                 { name: 'Terms & Conditions', href: '#' },
@@ -60,10 +61,9 @@ export const FooterNavigationWrapper: React.FC = () => {
     return (
         <footer className='bg-black text-white'>
             <FooterNavigation sections={sections} />
-
             <div className='bg-black py-5 text-white'>
-                <div className='flex flex-col items-center gap-4'>
-                    <div className='flex flex-wrap items-center justify-center gap-4 px-4'>
+                <div className='flex flex-col items-center gap-4 overflow-hidden'>
+                    <div className='flex flex-wrap items-center justify-center gap-2 px-10'>
                         {[
                             'visa.jpg',
                             'mc.png',
@@ -88,7 +88,7 @@ export const FooterNavigationWrapper: React.FC = () => {
                     </div>
 
                     <div className='flex items-center gap-2'>
-                        <span className='text-sm'>POWERED BY</span>
+                        <span className='text-sm'>{POWERED_BY}</span>
                         <img
                             src='https://www.gmesupply.com/images/footer/colum_img.png'
                             alt='Columbia Safety'

@@ -1,7 +1,7 @@
 import React from 'react';
 import CategoryPage from '@/components/categories-page';
 
-const category = () => {
+const Category = () => {
     return (
         <div>
             <CategoryPage />
@@ -9,4 +9,4 @@ const category = () => {
     );
 };
 
-export default category;
+export default Category;

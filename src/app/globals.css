@@ -5,7 +5,10 @@
     --foreground: #212529;
     --primary: #ce181e;
     --secondary: #6c757d;
+    --danger: #dc3545;
     --my-border-grey: #dee2e6;
+    --button-accent: #007bff;
+    --button-accent-secondary: #0056b3;
 }
 
 @theme inline {
@@ -13,7 +16,10 @@
     --color-foreground: var(--foreground);
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
+    --color-danger: var(--danger);
     --color-my-border-grey: var(--my-border-grey);
+    --color-button-accent: var(--button-accent);
+    --color-button-accent-secondary: var(--button-accent-secondary);
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 }
@@ -71,4 +77,28 @@ body {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+.form_input {
+    border: 1px solid #ced4da;
+    padding: 6px 8px;
+    &:focus-visible {
+        border: 1px solid #ced4da;
+        outline: none;
+    }
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.form_field_required {
+    display: none;
+    @apply text-danger font-bold;
+}
+
+.form_field:has(*[data-isrequired='true']) .form_field_required {
+    @apply inline;
 }

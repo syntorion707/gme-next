@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { MOBILE } from '@/utils/constant';
+import Category from './category';
 import LogoWithSidebarToggle from './logo-slidebar';
 import NavLinks from './nav-links';
 import SearchBar from './search-bar';
@@ -9,23 +10,10 @@ import Sidebar from './slidebar-mobile';
 
 const navLinks = [
     { name: 'GME PRO', href: '/', icon: 'https://www.gmesupply.com/Content/Images/pro-logo.svg' },
-    { name: 'Gearcor', href: '/', icon: 'https://www.gmesupply.com/Content/Images/gearcor-logo.svg' },
+    { name: 'Gearcor', href: '/gearcorplatform', icon: 'https://www.gmesupply.com/Content/Images/gearcor-logo.svg' },
     { name: 'Quote', href: '/', icon: 'https://www.gmesupply.com/Content/Images/quote.svg' },
     { name: 'Sign in', href: '/b2b', icon: 'https://www.gmesupply.com/Content/Images/signin.svg' },
     { name: 'Cart', href: '/cart', icon: 'https://www.gmesupply.com/Content/Images/cart.svg' }
-];
-
-const categoryLinks = [
-    { name: 'Featured Brands' },
-    { name: 'Fall Protection' },
-    { name: 'PPE & Work Wear' },
-    { name: 'Lifting & Rigging' },
-    { name: 'Rope' },
-    { name: 'Rescue' },
-    { name: 'First Aid' },
-    { name: 'Tools' },
-    { name: 'Bags, Buckets, & Storage' },
-    { name: 'Devices & Testing' }
 ];
 
 export default function Header() {
@@ -34,7 +22,7 @@ export default function Header() {
 
     return (
         <div className='top-0 z-50 md:sticky'>
-            <nav className='flex items-center justify-between bg-black px-4 py-3 text-white md:px-6'>
+            <nav className='flex items-center justify-between bg-black px-4 py-3 text-white'>
                 <LogoWithSidebarToggle toggleSidebar={toggleSidebar} />
                 <SearchBar />
                 <div className='mr-7 flex shrink-0 items-center gap-4'>
@@ -43,6 +31,7 @@ export default function Header() {
             </nav>
             <SearchBar variant={MOBILE} />
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+            <Category />
         </div>
     );
 }

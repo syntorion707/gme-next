@@ -16,7 +16,7 @@ const ViewSelection = (props: Props) => {
             <button
                 onClick={() => handleViewChange(VIEW_GRID)}
                 className={`text-secondary flex h-7 w-16 cursor-pointer items-center gap-1 border p-1 font-bold ${
-                    props.currentView === 'grid'
+                    props.currentView === VIEW_GRID
                         ? 'bg-primary rounded border-2 border-black text-white'
                         : 'border-my-border-grey border'
                 }`}>
@@ -34,7 +34,7 @@ const ViewSelection = (props: Props) => {
             <button
                 onClick={() => handleViewChange(VIEW_LIST)}
                 className={`text-secondary flex h-7 w-16 cursor-pointer items-center gap-1 p-1 ${
-                    props.currentView === 'list'
+                    props.currentView === VIEW_LIST
                         ? 'bg-primary rounded border-2 border-black text-white'
                         : 'border-my-border-grey border'
                 }`}>
