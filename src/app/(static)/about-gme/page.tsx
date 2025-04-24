@@ -108,7 +108,7 @@ interface BannerSectionProps {
     withOverlay?: boolean;
 }
 
-const BannerSection = ({ imageUrl, title, paragraphs, imageAlt = 'Image', withOverlay }: BannerSectionProps) => {
+const BannerSection = ({ imageUrl, title, paragraphs, withOverlay }: BannerSectionProps) => {
     const encodedUrl = imageUrl.replace(/'/g, '%27');
     const backgroundImage = withOverlay
         ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${encodedUrl}')`

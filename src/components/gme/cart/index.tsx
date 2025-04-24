@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
-import useSWR, { mutate } from 'swr';
+import useSWR from 'swr';
 import { Cart as ICart } from '@/types/cart';
 import CartList from './cart-list';
 

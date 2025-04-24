@@ -1,9 +1,8 @@
 'use client';
 
-import { title } from 'process';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import ImageCarousel from './image-carousel';
 
 const CategoryPage = () => {
@@ -245,8 +244,8 @@ const CategoryPage = () => {
                         <div key={index} className='mb-8'>
                             <div className='grid grid-cols-1 gap-4 py-2 md:grid-cols-3 lg:grid-cols-6'>
                                 {category.subCategory.map((subCategory: any, subIndex: number) => {
-                                    const formattedName = subCategory.name.toLowerCase().replace(/\s+/g, '-');
-                                    const fullPath = `${url}/${formattedName}`;
+                                    // const formattedName = subCategory.name.toLowerCase().replace(/\s+/g, '-');
+                                    // const fullPath = `${url}/${formattedName}`;
 
                                     return (
                                         <div key={subIndex} className='py-2'>

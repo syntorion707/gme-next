@@ -1,0 +1,460 @@
+[
+    {
+        "group": {
+            "name": "All Items",
+            "isRecommended": true,
+            "items": [
+                {
+                    "id": "u343843",
+                    "category": "Head PRODUCTION",
+                    "model": "C-HEAD-39327",
+                    "description": "Milwaukee Type 2 Safety Helmet with BOLT Accessory Clips - Black",
+                    "image": "https://www.gmesupply.com/media/pro-only/48-73-1311_3.jpg",
+                    "uom": "EA(1)",
+                    "order": "",
+                    "remove": "",
+                    "quantity": 2
+                },
+                {
+                    "id": "head-39283",
+                    "category": "Head PRODUCTION",
+                    "model": "C-HEAD-48027",
+                    "description": "3M SecureFit X5000 Series Safety Helmet",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/-/c-pz-a010aa00.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true,
+                    "quantity": 8
+                },
+                {
+                    "id": "head-39284",
+                    "category": "Head PRODUCTION",
+                    "model": "C-HEAD-GLXY420",
+                    "description": "Pyramex Ridgeline Cap Style Hard Hat",
+                    "image": "https://www.gmesupply.com/media/catalog/product/l/f/lf-hdf50-20cd-1.jpg",
+                    "uom": "EA(1)"
+                },
+                {
+                    "id": "j343843",
+                    "category": "PIM & SWEEP",
+                    "model": "C-HOL-TSTL-3A",
+                    "description": "Holland Pocket Continuity Tester & Toner with Voltage Protection with AAA Battery",
+                    "image": "https://www.gmesupply.com/media/wireline/C-HOL-TSTL-3A-1.jpg",
+                    "uom": "PR(2)",
+                    "order": "",
+                    "remove": "",
+                    "isQuickShip": true,
+                    "quantity": "11"
+                },
+                {
+                    "id": "pim-29843",
+                    "category": "PIM & SWEEP",
+                    "model": "C-BLANKKET",
+                    "description": "ConcealFab Corporation PIM Blanket",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/o/con-007640-newgry.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "pim-29844",
+                    "category": "PIM & SWEEP",
+                    "model": "C-SWEEP-ANALYZER",
+                    "description": "Field Sweep Analyzer Kit",
+                    "image": "https://www.gmesupply.com/media/catalog/product/farwest/2460_3881_large.jpg",
+                    "uom": "EA(1)"
+                },
+                {
+                    "id": "head-39285",
+                    "category": "Head PRODUCTION",
+                    "model": "C-HEAD-FULL300",
+                    "description": "Full Brim Hard Hat with Fas-Trac Suspension",
+                    "image": "https://www.gmesupply.com/media/catalog/product/u/n/untitled%20design%20-%202024-09-17t103041.003.png",
+                    "uom": "EA(1)"
+                },
+                {
+                    "id": "u343e3843",
+                    "category": "CORING & STRIPING TOOLS",
+                    "model": "C-CAB-COBRA360",
+                    "description": "Cable Prep Cobra360 Compression Tool",
+                    "image": "https://www.gmesupply.com/media/catalog/product/g/r/groupcobra.jpg",
+                    "quantity": "5",
+                    "uom": "EA(1)",
+                    "order": "",
+                    "remove": "",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "coring-92034",
+                    "category": "CORING & STRIPING TOOLS",
+                    "model": "C-STRIP-ECO1",
+                    "description": "Jonard Tools Cable Stripping Tool",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/s/cst-625.jpg",
+                    "uom": "EA(1)"
+                },
+                {
+                    "id": "coring-92035",
+                    "category": "CORING & STRIPING TOOLS",
+                    "model": "C-CORE-DX15",
+                    "description": "Ripley Cablematic Core Tool",
+                    "image": "https://www.gmesupply.com/media/catalog/product/a/i/aio-412.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "coring-92036",
+                    "category": "CORING & STRIPING TOOLS",
+                    "model": "C-CORE-RNDX",
+                    "description": "Ripley RNDX Rotary Drop Cable Stripper",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/o/coolbrownripnew.jpg",
+                    "uom": "EA(1)",
+                    "quantity": "8"
+                },
+                {
+                    "id": "cxcw43843",
+                    "category": "WELDING",
+                    "model": "KIT-SMALLCELL-CADWELD",
+                    "description": "Cadweld Plus Kit for Small Cells",
+                    "image": "https://www.gmesupply.com/media/catalog/product/s/m/smallcell-cadweld.jpg",
+                    "quantity": "8",
+                    "uom": "EA(9)",
+                    "order": "",
+                    "remove": ""
+                },
+                {
+                    "id": "weld-92834",
+                    "category": "WELDING",
+                    "model": "WLD-GLOVE-PRO",
+                    "description": "Lincoln Electric Welding Gloves",
+                    "image": "https://www.gmesupply.com/media/catalog/product/w/e/weld2.jpg",
+                    "uom": "PR(1)"
+                },
+                {
+                    "id": "weld-92835",
+                    "category": "WELDING",
+                    "model": "WLD-WESTFALL-AUTO",
+                    "description": "WestFall Pro 88030 Ascend Welding Tower Climbing Harness",
+                    "image": "https://www.gmesupply.com/media/catalog/product/w/f/wf-88011k-2-web.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "weld-921898",
+                    "category": "WELDING",
+                    "model": "WLD-JACKET",
+                    "description": "Black Stallion TruGuard 200 FR Green Cotton Welding Jacket",
+                    "image": "https://www.gmesupply.com/media/catalog/product/b/l/blk-f9-30c.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": false,
+                    "quantity": "1"
+                },
+                {
+                    "id": "weld-92898434",
+                    "category": "WELDING",
+                    "model": "WLD-TIG-HELMET",
+                    "description": "Tigerhood Classic Welding Helmet Shell, #10, 2in x 4-1/4in, Gray, with Speedy Loop",
+                    "image": "https://www.gmesupply.com/media/catalog/product/f/i/fibre_metal_5906gy.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "koo78",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-12411",
+                    "description": "Ergodyne Chill-Its Evaporative Cooling Towel",
+                    "image": "https://www.gmesupply.com/media/catalog/product/1/2/12411-6601-blue-economy-evaporative-cooling-towel-2.jpg",
+                    "uom": "EA(1)",
+                    "order": "",
+                    "remove": ""
+                },
+                {
+                    "id": "cool-349847",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-6605",
+                    "description": "Ergodyne 6602 Chill-Its Evaporative Cooling Towel",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/-/c-ed-12420.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true,
+                    "quantity": "1"
+                },
+                {
+                    "id": "cool-34985",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-66078",
+                    "description": "OccuNomix Miracool Cooling Neck Wrap",
+                    "image": "https://www.gmesupply.com/media/catalog/product/9/3/930-bl-a.jpg",
+                    "uom": "EA(1)"
+                },
+                {
+                    "id": "cool-3498410",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-6325",
+                    "description": "Ergodyne Chill-Its 6487 Cooling Multi-Band",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/-/c-ed-6487.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true,
+                    "quantity": "5"
+                },
+                {
+                    "id": "cool-34323984",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-66000",
+                    "description": "Ergodyne Chill-Its 6710FR Evaporative FR Cooling Triangle Hat",
+                    "image": "https://www.gmesupply.com/media/catalog/product/6/7/6710frlime.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "cool-34932384",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-660115",
+                    "description": "Anchor Brand 10 foot by 12 foot Polyethylene Blue Tarp",
+                    "image": "https://www.gmesupply.com/media/catalog/product/1/0/101-67120b.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                }
+            ]
+        }
+    },
+    {
+        "group": {
+            "name": "Head PRODUCTION",
+            "isRecommended": true,
+            "items": [
+                {
+                    "id": "u343843",
+                    "category": "Head PRODUCTION",
+                    "model": "C-HEAD-39327",
+                    "description": "Milwaukee Type 2 Safety Helmet with BOLT Accessory Clips - Black",
+                    "image": "https://www.gmesupply.com/media/pro-only/48-73-1311_3.jpg",
+                    "uom": "EA(1)",
+                    "order": "",
+                    "remove": ""
+                },
+                {
+                    "id": "head-39283",
+                    "category": "Head PRODUCTION",
+                    "model": "C-HEAD-48027",
+                    "description": "3M SecureFit X5000 Series Safety Helmet",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/-/c-pz-a010aa00.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "head-39284",
+                    "category": "Head PRODUCTION",
+                    "model": "C-HEAD-GLXY420",
+                    "description": "Pyramex Ridgeline Cap Style Hard Hat",
+                    "image": "https://www.gmesupply.com/media/catalog/product/l/f/lf-hdf50-20cd-1.jpg",
+                    "uom": "EA(1)"
+                },
+                {
+                    "id": "head-39285",
+                    "category": "Head PRODUCTION",
+                    "model": "C-HEAD-FULL300",
+                    "description": "Full Brim Hard Hat with Fas-Trac Suspension",
+                    "image": "https://www.gmesupply.com/media/catalog/product/u/n/untitled%20design%20-%202024-09-17t103041.003.png",
+                    "uom": "EA(1)"
+                }
+            ]
+        }
+    },
+    {
+        "group": {
+            "name": "CORING & STRIPING TOOLS",
+            "isRecommended": false,
+            "items": [
+                {
+                    "id": "u343e3843",
+                    "category": "CORING & STRIPING TOOLS",
+                    "model": "C-CAB-COBRA360",
+                    "description": "Cable Prep Cobra360 Compression Tool",
+                    "image": "https://www.gmesupply.com/media/catalog/product/g/r/groupcobra.jpg",
+                    "quantity": "5",
+                    "uom": "EA(1)",
+                    "order": "",
+                    "remove": "",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "coring-92034",
+                    "category": "CORING & STRIPING TOOLS",
+                    "model": "C-STRIP-ECO1",
+                    "description": "Jonard Tools Cable Stripping Tool",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/s/cst-625.jpg",
+                    "uom": "EA(1)"
+                },
+                {
+                    "id": "coring-92035",
+                    "category": "CORING & STRIPING TOOLS",
+                    "model": "C-CORE-DX15",
+                    "description": "Ripley Cablematic Core Tool",
+                    "image": "https://www.gmesupply.com/media/catalog/product/a/i/aio-412.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "coring-92036",
+                    "category": "CORING & STRIPING TOOLS",
+                    "model": "C-CORE-RNDX",
+                    "description": "Ripley RNDX Rotary Drop Cable Stripper",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/o/coolbrownripnew.jpg",
+                    "uom": "EA(1)"
+                }
+            ]
+        }
+    },
+    {
+        "group": {
+            "name": "PIM & SWEEP",
+            "isRecommended": true,
+            "items": [
+                {
+                    "id": "j343843",
+                    "category": "PIM & SWEEP",
+                    "model": "C-HOL-TSTL-3A",
+                    "description": "Holland Pocket Continuity Tester & Toner with Voltage Protection with AAA Battery",
+                    "image": "https://www.gmesupply.com/media/wireline/C-HOL-TSTL-3A-1.jpg",
+                    "uom": "PR(2)",
+                    "order": "",
+                    "remove": "",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "pim-29843",
+                    "category": "PIM & SWEEP",
+                    "model": "C-BLANKKET",
+                    "description": "ConcealFab Corporation PIM Blanket",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/o/con-007640-newgry.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "pim-29844",
+                    "category": "PIM & SWEEP",
+                    "model": "C-SWEEP-ANALYZER",
+                    "description": "Field Sweep Analyzer Kit",
+                    "image": "https://www.gmesupply.com/media/catalog/product/farwest/2460_3881_large.jpg",
+                    "uom": "EA(1)"
+                }
+            ]
+        }
+    },
+    {
+        "group": {
+            "name": "WELDING",
+            "isRecommended": false,
+            "items": [
+                {
+                    "id": "cxcw43843",
+                    "category": "WELDING",
+                    "model": "KIT-SMALLCELL-CADWELD",
+                    "description": "Cadweld Plus Kit for Small Cells",
+                    "image": "https://www.gmesupply.com/media/catalog/product/s/m/smallcell-cadweld.jpg",
+                    "quantity": "8",
+                    "uom": "EA(9)",
+                    "order": "",
+                    "remove": ""
+                },
+                {
+                    "id": "weld-92834",
+                    "category": "WELDING",
+                    "model": "WLD-GLOVE-PRO",
+                    "description": "Lincoln Electric Welding Gloves",
+                    "image": "https://www.gmesupply.com/media/catalog/product/w/e/weld2.jpg",
+                    "uom": "PR(1)"
+                },
+                {
+                    "id": "weld-92835",
+                    "category": "WELDING",
+                    "model": "WLD-WESTFALL-AUTO",
+                    "description": "WestFall Pro 88030 Ascend Welding Tower Climbing Harness",
+                    "image": "https://www.gmesupply.com/media/catalog/product/w/f/wf-88011k-2-web.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "weld-928948",
+                    "category": "WELDING",
+                    "model": "WLD-JACKET",
+                    "description": "Black Stallion TruGuard 200 FR Green Cotton Welding Jacket",
+                    "image": "https://www.gmesupply.com/media/catalog/product/b/l/blk-f9-30c.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true,
+                    "quantity": "07"
+                },
+                {
+                    "id": "weld-92898",
+                    "category": "WELDING",
+                    "model": "WLD-TIG-HELMET",
+                    "description": "Tigerhood Classic Welding Helmet Shell, #10, 2in x 4-1/4in, Gray, with Speedy Loop",
+                    "image": "https://www.gmesupply.com/media/catalog/product/f/i/fibre_metal_5906gy.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                }
+            ]
+        }
+    },
+    {
+        "group": {
+            "name": "BODY COOLING/WARMING",
+            "isRecommended": true,
+            "items": [
+                {
+                    "id": "koo78",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-12411",
+                    "description": "Ergodyne Chill-Its Evaporative Cooling Towel",
+                    "image": "https://www.gmesupply.com/media/catalog/product/1/2/12411-6601-blue-economy-evaporative-cooling-towel-2.jpg",
+                    "uom": "EA(1)",
+                    "order": "",
+                    "remove": ""
+                },
+                {
+                    "id": "cool-34932384",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-6605",
+                    "description": "Ergodyne 6602 Chill-Its Evaporative Cooling Towel",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/-/c-ed-12420.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true,
+                    "quantity": "10"
+                },
+                {
+                    "id": "cool-349545",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-66078",
+                    "description": "OccuNomix Miracool Cooling Neck Wrap",
+                    "image": "https://www.gmesupply.com/media/catalog/product/9/3/930-bl-a.jpg",
+                    "uom": "EA(1)"
+                },
+                {
+                    "id": "cool-34984",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-6325",
+                    "description": "Ergodyne Chill-Its 6487 Cooling Multi-Band",
+                    "image": "https://www.gmesupply.com/media/catalog/product/c/-/c-ed-6487.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                },
+                {
+                    "id": "cool-3498434",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-66000",
+                    "description": "Ergodyne Chill-Its 6710FR Evaporative FR Cooling Triangle Hat",
+                    "image": "https://www.gmesupply.com/media/catalog/product/6/7/6710frlime.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true,
+                    "quantity": "3"
+                },
+                {
+                    "id": "cool-349848",
+                    "category": "BODY COOLING/WARMING",
+                    "model": "ED-660115",
+                    "description": "Anchor Brand 10 foot by 12 foot Polyethylene Blue Tarp",
+                    "image": "https://www.gmesupply.com/media/catalog/product/1/0/101-67120b.jpg",
+                    "uom": "EA(1)",
+                    "isQuickShip": true
+                }
+            ]
+        }
+    }
+]

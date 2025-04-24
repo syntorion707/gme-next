@@ -1,6 +1,7 @@
 import { Cart } from '@/types/cart';
 import { CategoryType } from '@/types/category';
 import { ProductDetailsTypes } from '@/types/common';
+import { GearList } from '@/types/gearList';
 import { ProductType } from '@/types/product';
 import { serverFetcher } from '.';
 
@@ -26,4 +27,10 @@ export const getProduct = async () => {
     const products = await serverFetcher('/api?scenario=getProduct');
 
     return products as ProductDetailsTypes[];
+};
+
+export const getGearList = async () => {
+    const gearList = await serverFetcher('/api?scenario=getGearList');
+
+    return gearList as GearList[];
 };

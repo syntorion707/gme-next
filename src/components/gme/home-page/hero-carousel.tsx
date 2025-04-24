@@ -25,8 +25,8 @@ interface HeroCarouselProps {
 export const HeroCarousel: React.FC<HeroCarouselProps> = ({ images, banners }) => {
     const infiniteImages = useMemo(() => {
         if (images.length < 2) return images;
-        
-return [images[images.length - 1], ...images, images[0]];
+
+        return [images[images.length - 1], ...images, images[0]];
     }, [images]);
 
     const [currentIndex, setCurrentIndex] = useState(1);
@@ -52,8 +52,8 @@ return [images[images.length - 1], ...images, images[0]];
             const timer = setTimeout(() => {
                 setIsTransitionEnabled(true);
             }, 10);
-            
-return () => clearTimeout(timer);
+
+            return () => clearTimeout(timer);
         }
     }, [isTransitionEnabled]);
 
@@ -72,8 +72,8 @@ return () => clearTimeout(timer);
     useEffect(() => {
         if (isPaused || !isTransitionEnabled) return;
         const interval = setInterval(nextSlide, 5000);
-        
-return () => clearInterval(interval);
+
+        return () => clearInterval(interval);
     }, [isPaused, nextSlide, isTransitionEnabled]);
 
     const handleTouchStart = (e: React.TouchEvent) => {

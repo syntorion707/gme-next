@@ -147,8 +147,8 @@ docs: update installation instructions
 3. Styles & types
 
 ```typescript
-import { useState } from 'react';
 import Head from 'next/head';
+import { useState } from 'react';
 import UserProfile from '@/components/user-profile';
 import type { User } from '@/types';
 ```

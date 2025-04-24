@@ -8,8 +8,8 @@ const GroupPurchaseHistory = () => {
     const { requestSort, sortConfig } = useSort();
     const [isRowsOpen, setIsRowsOpen] = useState(false);
     const [rowsPerPage, setRowsPerPage] = useState(10);
-    
-return (
+
+    return (
         <div className='w-full max-w-full p-0'>
             <div className='overflow-auto'>
                 <h3 className='text-primary text-3xl font-normal uppercase'>Group Purchase History</h3>
