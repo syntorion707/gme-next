@@ -1,3 +1,4 @@
+import React from 'react';
 import ProductDetailsPage from '@/components/gme/pdp';
 
 const Pdp = () => {
