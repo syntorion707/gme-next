@@ -54,8 +54,8 @@ export const NewProducts: React.FC<NewProductsProps> = ({ products }) => {
         };
         handleResize();
         window.addEventListener('resize', handleResize);
-        
-return () => window.removeEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const maxIndex = Math.max(products.length - slidesToShow, 0);
